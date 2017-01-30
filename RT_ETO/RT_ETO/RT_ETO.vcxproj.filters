@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\math">
+      <UniqueIdentifier>{b374d5b4-1fc2-49bc-923b-eae062a0d02f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test Files">
+      <UniqueIdentifier>{ffa69553-526c-421d-8318-5a3e1bc725b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test Files\test_management">
+      <UniqueIdentifier>{6e5f415c-513e-4c66-9597-35fe21e011c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\file_system">
+      <UniqueIdentifier>{b9b7ed1b-fe53-4400-aa21-37b97b5cdf5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\image">
+      <UniqueIdentifier>{4e021742-2d1f-440d-b57e-c7645047565c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test Files\tests">
+      <UniqueIdentifier>{e1cbc944-b7e1-40bf-a78f-becb1f8e5ecf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TestFactory.h">
+      <Filter>Test Files\test_management</Filter>
+    </ClInclude>
+    <ClInclude Include="TestManager.h">
+      <Filter>Test Files\test_management</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem.h">
+      <Filter>Source Files\file_system</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Source Files\image</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageBuffer.h">
+      <Filter>Source Files\image</Filter>
+    </ClInclude>
+    <ClInclude Include="ITest.h">
+      <Filter>Test Files\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Test.h">
+      <Filter>Test Files\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Vec3Test.h">
+      <Filter>Test Files\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorTest.h">
+      <Filter>Test Files\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="MathUtil.h">
+      <Filter>Source Files\math</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="driver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestFactory.cpp">
+      <Filter>Test Files\test_management</Filter>
+    </ClCompile>
+    <ClCompile Include="TestManager.cpp">
+      <Filter>Test Files\test_management</Filter>
+    </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>Source Files\image</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageBuffer.cpp">
+      <Filter>Source Files\image</Filter>
+    </ClCompile>
+    <ClCompile Include="Test.cpp">
+      <Filter>Test Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Vec3Test.cpp">
+      <Filter>Test Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorTest.cpp">
+      <Filter>Test Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="MathUtil.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem.cpp">
+      <Filter>Source Files\file_system</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RT_ETO.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
