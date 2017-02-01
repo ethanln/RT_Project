@@ -150,6 +150,7 @@
     <ClInclude Include="Color.h" />
     <ClInclude Include="ColorTest.h" />
     <ClInclude Include="FileSystem.h" />
+    <ClInclude Include="ImageBufferTest.h" />
     <ClInclude Include="ImageBuffer.h" />
     <ClInclude Include="ITest.h" />
     <ClInclude Include="MathUtil.h" />
@@ -167,6 +168,7 @@
     <ClCompile Include="driver.cpp" />
     <ClCompile Include="FileSystem.cpp" />
     <ClCompile Include="ImageBuffer.cpp" />
+    <ClCompile Include="ImageBufferTest.cpp" />
     <ClCompile Include="MathUtil.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

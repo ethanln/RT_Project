@@ -75,6 +75,9 @@
     <ClInclude Include="MathUtil.h">
       <Filter>Source Files\math</Filter>
     </ClInclude>
+    <ClInclude Include="ImageBufferTest.h">
+      <Filter>Test Files\tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -109,6 +112,9 @@
     </ClCompile>
     <ClCompile Include="FileSystem.cpp">
       <Filter>Source Files\file_system</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageBufferTest.cpp">
+      <Filter>Test Files\tests</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

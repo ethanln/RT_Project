@@ -33,6 +33,10 @@ Test* TestFactory::_make_test(string key)
 	{
 		return new ColorTest();
 	}
+	else if (key == "ImageBufferTest")
+	{
+		return new ImageBufferTest();
+	}
 	return nullptr;
 }
 

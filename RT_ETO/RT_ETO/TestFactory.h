@@ -7,6 +7,7 @@
 #include "ITest.h"
 #include "Vec3Test.h"
 #include "ColorTest.h"
+#include "ImageBufferTest.h"
 
 using namespace std;
 
