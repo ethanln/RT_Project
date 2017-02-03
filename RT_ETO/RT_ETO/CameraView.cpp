@@ -20,17 +20,19 @@ CameraView::~CameraView()
 
 glm::vec3 CameraView::cast_ray(int _x, int _y)
 {
-	// IMPLEMENT: is this cohesive with the class?
+	// IMPLEMENT: is this cohesive with the class?'
+	return glm::vec3();
 }
 
 glm::vec3 CameraView::cast_jitter_ray(int _x, int _y)
 {
 	// IMPLEMENT: is this cohesive with the class?
+	return glm::vec3();
 }
 
 void CameraView::set_cam_pos(glm::vec3 _new_pos)
 {
-	this->cam->position = _new_pos
+	this->cam->position = _new_pos;
 }
 
 void CameraView::set_cam_orientation(glm::vec3 _new_orientation)
@@ -67,8 +69,11 @@ void CameraView::setup_view_plane_coor()
 {
 	float z = MathUtil::MAG(this->look_from - this->look_at);
 
-	float max_x, max_y = z / cos(this->fov / 2.0f);
-	float min_x, min_y = -(z / cos(this->fov / 2.0f));
+	float max_x = z / cos(this->fov / 2.0f);
+	float max_y = z / cos(this->fov / 2.0f);
+
+	float min_x = -(z / cos(this->fov / 2.0f));
+	float min_y = -(z / cos(this->fov / 2.0f));
 
 	float increment_x = (max_x * 2.0f) / this->dim_x;
 	float increment_y = (max_y * 2.0f) / this->dim_y;

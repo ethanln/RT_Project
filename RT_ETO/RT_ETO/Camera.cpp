@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "Camera.h"
 
 Camera::Camera(glm::vec3 _position, glm::vec3 _orientation)
