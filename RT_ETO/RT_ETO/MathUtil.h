@@ -22,5 +22,10 @@ class MathUtil
 		* Global dot product function.
 		*/
 		static float DOT(glm::vec3 v1, glm::vec3 v2);
+
+		/**
+		* Global magnitude function.
+		*/
+		static float MAG(glm::vec3 v);
 };
 #endif

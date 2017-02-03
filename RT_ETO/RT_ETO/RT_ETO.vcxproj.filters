@@ -31,6 +31,18 @@
     <Filter Include="Test Files\tests">
       <UniqueIdentifier>{e1cbc944-b7e1-40bf-a78f-becb1f8e5ecf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ray_tracer">
+      <UniqueIdentifier>{447159bf-02c9-4bff-afb3-e225c0dbe567}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\camera">
+      <UniqueIdentifier>{081146ef-fcb5-4c90-83ce-fcb6a99ff9c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ray_tracer\interface">
+      <UniqueIdentifier>{0f027463-73e9-4408-9b7d-e021a3a7fafc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test Files\tests\interface">
+      <UniqueIdentifier>{42f1f2ce-e72b-4d7b-8448-7902c458f279}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -60,9 +72,6 @@
     <ClInclude Include="ImageBuffer.h">
       <Filter>Source Files\image</Filter>
     </ClInclude>
-    <ClInclude Include="ITest.h">
-      <Filter>Test Files\tests</Filter>
-    </ClInclude>
     <ClInclude Include="Test.h">
       <Filter>Test Files\tests</Filter>
     </ClInclude>
@@ -77,6 +86,21 @@
     </ClInclude>
     <ClInclude Include="ImageBufferTest.h">
       <Filter>Test Files\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="RayTracer.h">
+      <Filter>Source Files\ray_tracer</Filter>
+    </ClInclude>
+    <ClInclude Include="IRayTracer.h">
+      <Filter>Source Files\ray_tracer\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="ITest.h">
+      <Filter>Test Files\tests\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Source Files\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraView.h">
+      <Filter>Source Files\camera</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +139,12 @@
     </ClCompile>
     <ClCompile Include="ImageBufferTest.cpp">
       <Filter>Test Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraView.cpp">
+      <Filter>Source Files\camera</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
