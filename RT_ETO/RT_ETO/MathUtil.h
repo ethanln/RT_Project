@@ -11,6 +11,13 @@ using namespace std;
 class MathUtil
 {
 	public:
+
+		/**
+		* PI value.
+		*/
+		static float PI;
+
+	public:
 	
 		/**
 		* Global normalize function.
@@ -27,5 +34,15 @@ class MathUtil
 		* Global magnitude function.
 		*/
 		static float MAG(glm::vec3 v);
+
+		/**
+		* Global to radians.
+		*/
+		static float TO_RADIANS(float degree);
+
+		/**
+		* Global to degrees.
+		*/
+		static float TO_DEGREES(float radians);
 };
 #endif

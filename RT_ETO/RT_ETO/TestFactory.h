@@ -8,6 +8,7 @@
 #include "Vec3Test.h"
 #include "ColorTest.h"
 #include "ImageBufferTest.h"
+#include "CameraViewTest.h"
 
 using namespace std;
 

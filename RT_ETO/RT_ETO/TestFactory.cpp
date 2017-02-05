@@ -37,6 +37,10 @@ Test* TestFactory::_make_test(string key)
 	{
 		return new ImageBufferTest();
 	}
+	else if (key == "CameraViewTest") 
+	{
+		return new CameraViewTest();
+	}
 	return nullptr;
 }
 

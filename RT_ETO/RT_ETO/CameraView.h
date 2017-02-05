@@ -6,6 +6,9 @@
 #include <glm/mat4x4.hpp>
 #include <vector>
 #include <math.h>
+#include <fstream>
+#include <iostream>
+#include <string>
 #include "Camera.h"
 #include "MathUtil.h"
 
@@ -64,12 +67,13 @@ class CameraView
 		/**
 		* Cast initial ray from cam postion to view plane.
 		*/
-		virtual glm::vec3 cast_ray(int _x, int _y);
+		virtual glm::vec3 cast_ray(int _x, int _y, bool is_normalized);
+
 
 		/**
 		* Cast initial ray from cam postion to view plane with variation.
 		*/
-		virtual glm::vec3 cast_jitter_ray(int _x, int _y);
+		virtual glm::vec3 cast_jitter_ray(int _x, int _y, bool is_normalized);
 
 		/**
 		* Set cam position.
@@ -104,7 +108,7 @@ class CameraView
 		/**
 		* Print view plane table;
 		*/
-		virtual void print_viewplane();
+		virtual void print_viewplane(string filename);
 
 	private:
 

@@ -102,6 +102,9 @@
     <ClInclude Include="CameraView.h">
       <Filter>Source Files\camera</Filter>
     </ClInclude>
+    <ClInclude Include="CameraViewTest.h">
+      <Filter>Test Files\tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -145,6 +148,9 @@
     </ClCompile>
     <ClCompile Include="CameraView.cpp">
       <Filter>Source Files\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraViewTestcpp.cpp">
+      <Filter>Test Files\tests</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

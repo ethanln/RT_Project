@@ -3,6 +3,8 @@
 
 using namespace std;
 
+float MathUtil::PI = 3.14159265;
+
 glm::vec3 MathUtil::NORMALIZE(glm::vec3 v)
 {
 	float dx = powf(v.x, 2.0f);
@@ -25,5 +27,15 @@ float MathUtil::DOT(glm::vec3 v1, glm::vec3 v2)
 
 float MathUtil::MAG(glm::vec3 v)
 {
-	return sqrt(pow(2.0f, v.x) + pow(2.0f, v.y) + pow(2.0f, v.z));
+	return sqrt(pow(v.x, 2.0f) + pow(v.y, 2.0f) + pow(v.z, 2.0f));
+}
+
+float MathUtil::TO_RADIANS(float degree)
+{
+	return (degree * PI) / 180.0f;
+}
+
+float MathUtil::TO_DEGREES(float radians)
+{
+	return (radians * 180.0f) / PI;
 }

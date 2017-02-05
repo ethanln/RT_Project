@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CameraView.h" />
+    <ClInclude Include="CameraViewTest.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="ColorTest.h" />
     <ClInclude Include="FileSystem.h" />
@@ -169,6 +170,7 @@
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CameraView.cpp" />
+    <ClCompile Include="CameraViewTestcpp.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="ColorTest.cpp" />
     <ClCompile Include="driver.cpp" />

@@ -18,13 +18,19 @@ CameraView::~CameraView()
 	delete this->cam;
 }
 
-glm::vec3 CameraView::cast_ray(int _x, int _y)
+glm::vec3 CameraView::cast_ray(int _x, int _y, bool is_normalized)
 {
-	// IMPLEMENT: is this cohesive with the class?'
-	return glm::vec3();
+	glm::vec3 ray = this->look_from - this->view_plane.at(_y).at(_x);
+
+	if (is_normalized)
+	{
+		ray = MathUtil::NORMALIZE(ray);
+	}
+
+	return ray;
 }
 
-glm::vec3 CameraView::cast_jitter_ray(int _x, int _y)
+glm::vec3 CameraView::cast_jitter_ray(int _x, int _y, bool is_normalized)
 {
 	// IMPLEMENT: is this cohesive with the class?
 	return glm::vec3();
@@ -60,20 +66,31 @@ int CameraView::get_dim_y()
 	return this->dim_y;
 }
 
-void CameraView::print_viewplane()
+void CameraView::print_viewplane(string filename)
 {
-	// IMPLEMENT
+	ofstream view_file;
+	view_file.open(filename.c_str());
+	for (unsigned int i = 0; i < this->dim_y; i++)
+	{
+		for (unsigned int j = 0; j < this->dim_x; j++) 
+		{
+			view_file << "(" << this->view_plane.at(i).at(j).x << " : " << this->view_plane.at(i).at(j).y << "),";
+		}
+		view_file << "\n";
+	}
+
+	view_file.close();
 }
 
 void CameraView::setup_view_plane_coor()
 {
 	float z = MathUtil::MAG(this->look_from - this->look_at);
 
-	float max_x = z / cos(this->fov / 2.0f);
-	float max_y = z / cos(this->fov / 2.0f);
+	float max_x = z / cos(MathUtil::TO_RADIANS(this->fov / 2.0f));
+	float max_y = z / cos(MathUtil::TO_RADIANS(this->fov / 2.0f));
 
-	float min_x = -(z / cos(this->fov / 2.0f));
-	float min_y = -(z / cos(this->fov / 2.0f));
+	float min_x = -(z / cos(MathUtil::TO_RADIANS(this->fov / 2.0f)));
+	float min_y = -(z / cos(MathUtil::TO_RADIANS(this->fov / 2.0f)));
 
 	float increment_x = (max_x * 2.0f) / this->dim_x;
 	float increment_y = (max_y * 2.0f) / this->dim_y;
@@ -89,6 +106,7 @@ void CameraView::setup_view_plane_coor()
 			this->view_plane.at(i).push_back(glm::vec3(current_x, current_y, 0.0f));
 			current_x += increment_x;	
 		}
+		current_x = min_x;
 		current_y -= increment_y;
 	}
 }
