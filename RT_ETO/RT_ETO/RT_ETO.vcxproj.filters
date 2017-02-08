@@ -43,6 +43,9 @@
     <Filter Include="Test Files\tests\interface">
       <UniqueIdentifier>{42f1f2ce-e72b-4d7b-8448-7902c458f279}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ray_tracer\ray">
+      <UniqueIdentifier>{6953c372-4077-43be-8684-6b5c1823a048}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -105,6 +108,9 @@
     <ClInclude Include="CameraViewTest.h">
       <Filter>Test Files\tests</Filter>
     </ClInclude>
+    <ClInclude Include="Ray.h">
+      <Filter>Source Files\ray_tracer\ray</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -151,6 +157,9 @@
     </ClCompile>
     <ClCompile Include="CameraViewTestcpp.cpp">
       <Filter>Test Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Ray.cpp">
+      <Filter>Source Files\ray_tracer\ray</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

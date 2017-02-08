@@ -3,6 +3,8 @@
 
 #include <glm/vec3.hpp>
 #include <math.h>
+#include <cstdlib>
+#include <ctime>
 
 #pragma once
 
@@ -10,6 +12,12 @@ using namespace std;
 
 class MathUtil
 {
+	private:
+		/**
+		* Random seed variable state
+		*/
+		static bool IS_SEED_GENERATED;
+
 	public:
 
 		/**
@@ -23,7 +31,6 @@ class MathUtil
 		* Global normalize function.
 		*/
 		static glm::vec3 NORMALIZE(glm::vec3 v);
-
 
 		/**
 		* Global dot product function.
@@ -44,5 +51,35 @@ class MathUtil
 		* Global to degrees.
 		*/
 		static float TO_DEGREES(float radians);
+
+		/**
+		* Global get vector ray.
+		*/
+		static glm::vec3 CAST_RAY(glm::vec3 p1, glm::vec3 p2, bool is_normalized);
+
+		/**
+		* Global get vector ray with jittering.
+		*/
+		static glm::vec3 CAST_RAY_JITTER(glm::vec3 p1, glm::vec3 p2, float radius_x, float radius_y, bool is_normalized);
+
+		/**
+		* Global get vector reflection ray.
+		*/
+		static glm::vec3 CAST_RAY_REFLECTION();
+
+		/**
+		* Global get vector reflection ray with gloss.
+		*/
+		static glm::vec3 CAST_RAY_REFLECTION_GLOSS();
+
+		/**
+		* Global get vector refraction ray.
+		*/
+		static glm::vec3 CAST_RAY_REFRACTION_GLOSS();
+
+		/**
+		* Set random seed generator.
+		*/
+		static void INITIALIZE_RANDOM_SEED();
 };
 #endif

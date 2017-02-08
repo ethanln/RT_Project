@@ -2,6 +2,8 @@ c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\rt_eto.pch
 c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\vc140.pdb
 c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\vc140.idb
 c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\stdafx.obj
+c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\camera.obj
+c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\cameraview.obj
 c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\color.obj
 c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\colortest.obj
 c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\driver.obj
@@ -13,16 +15,6 @@ c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\test.obj
 c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\testfactory.obj
 c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\testmanager.obj
 c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\vec3test.obj
-c:\users\ethan\desktop\development\raytracer\rt_eto\debug\rt_eto.ilk
-c:\users\ethan\desktop\development\raytracer\rt_eto\debug\rt_eto.exe
-c:\users\ethan\desktop\development\raytracer\rt_eto\debug\rt_eto.pdb
-c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\rt_eto.res
 c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\rt_eto.tlog\cl.command.1.tlog
 c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\rt_eto.tlog\cl.read.1.tlog
 c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\rt_eto.tlog\cl.write.1.tlog
-c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\rt_eto.tlog\link.command.1.tlog
-c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\rt_eto.tlog\link.read.1.tlog
-c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\rt_eto.tlog\link.write.1.tlog
-c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\rt_eto.tlog\rc.command.1.tlog
-c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\rt_eto.tlog\rc.read.1.tlog
-c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\debug\rt_eto.tlog\rc.write.1.tlog

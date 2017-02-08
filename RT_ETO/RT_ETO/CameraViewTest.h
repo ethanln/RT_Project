@@ -4,7 +4,8 @@
 
 #include "Test.h"
 #include "CameraView.h"
-#include "glm/vec3.hpp"
+#include <glm/vec3.hpp>
+#include "Ray.h"
 
 using namespace std;
 

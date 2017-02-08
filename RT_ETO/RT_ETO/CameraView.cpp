@@ -18,22 +18,15 @@ CameraView::~CameraView()
 	delete this->cam;
 }
 
-glm::vec3 CameraView::cast_ray(int _x, int _y, bool is_normalized)
+Ray CameraView::cast_ray(int _x, int _y, bool is_normalized, bool is_jitter)
 {
-	glm::vec3 ray = this->look_from - this->view_plane.at(_y).at(_x);
+	// TEST
+	glm::vec3 p1 = this->look_from;
+	glm::vec3 p2 = this->view_plane.at(_y).at(_x);
+	glm::vec3 ray = is_jitter ? MathUtil::CAST_RAY_JITTER(p1, p2, this->pixel_radius_x, this->pixel_radius_y, is_normalized) : MathUtil::CAST_RAY(p1, p2, is_normalized);
 
-	if (is_normalized)
-	{
-		ray = MathUtil::NORMALIZE(ray);
-	}
-
-	return ray;
-}
-
-glm::vec3 CameraView::cast_jitter_ray(int _x, int _y, bool is_normalized)
-{
-	// IMPLEMENT: is this cohesive with the class?
-	return glm::vec3();
+	// WILL NEED TO DEFINE MORE PARAMETERS IN RAY INSTANCE AFTER DESIGNING THE CLASS MEMEBERS FOR RAY.
+	return Ray(ray);
 }
 
 void CameraView::set_cam_pos(glm::vec3 _new_pos)
@@ -86,15 +79,23 @@ void CameraView::setup_view_plane_coor()
 {
 	float z = MathUtil::MAG(this->look_from - this->look_at);
 
+	// Get the maximum x and y value of the view plane.
 	float max_x = z / cos(MathUtil::TO_RADIANS(this->fov / 2.0f));
 	float max_y = z / cos(MathUtil::TO_RADIANS(this->fov / 2.0f));
 
+	// Get the minimum x and y value of the view plane.
 	float min_x = -(z / cos(MathUtil::TO_RADIANS(this->fov / 2.0f)));
 	float min_y = -(z / cos(MathUtil::TO_RADIANS(this->fov / 2.0f)));
 
+	// Get the increment value for both x and y.
 	float increment_x = (max_x * 2.0f) / this->dim_x;
 	float increment_y = (max_y * 2.0f) / this->dim_y;
 
+	// instantiate pixel radius.
+	this->pixel_radius_x = increment_x / 2.0f;
+	this->pixel_radius_y - increment_y / 2.0f;
+
+	// instantiate the current coordinate position of the view plane 
 	float current_x = min_x;
 	float current_y = max_y;
 
@@ -103,10 +104,16 @@ void CameraView::setup_view_plane_coor()
 
 		for (unsigned int j = 0; j < this->dim_x; j++)
 		{
+			// Instantiate x,y coordinate position of the pixel index.
 			this->view_plane.at(i).push_back(glm::vec3(current_x, current_y, 0.0f));
+
+			// Increment the current x coordinate position.
 			current_x += increment_x;	
 		}
+		// Reset current x coordinate position on the view plain.
 		current_x = min_x;
+
+		// Increment the current y coordinate position.
 		current_y -= increment_y;
 	}
 }

@@ -11,6 +11,7 @@
 #include <string>
 #include "Camera.h"
 #include "MathUtil.h"
+#include "Ray.h"
 
 using namespace std;
 
@@ -52,6 +53,16 @@ class CameraView
 		*/
 		float fov;
 
+		/**
+		* Radius x of each pixel location
+		*/
+		float pixel_radius_x;
+
+		/**
+		* Radius y of each pixel location
+		*/
+		float pixel_radius_y;
+
 	public:
 
 		/**
@@ -65,15 +76,9 @@ class CameraView
 		~CameraView();
 
 		/**
-		* Cast initial ray from cam postion to view plane.
+		* Cast initial ray from cam postion to view plane, jittering is an option.
 		*/
-		virtual glm::vec3 cast_ray(int _x, int _y, bool is_normalized);
-
-
-		/**
-		* Cast initial ray from cam postion to view plane with variation.
-		*/
-		virtual glm::vec3 cast_jitter_ray(int _x, int _y, bool is_normalized);
+		virtual Ray cast_ray(int _x, int _y, bool is_normalized, bool is_jitter);
 
 		/**
 		* Set cam position.
