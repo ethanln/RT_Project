@@ -11,7 +11,6 @@
 #include <string>
 #include "Camera.h"
 #include "MathUtil.h"
-#include "Ray.h"
 
 using namespace std;
 
@@ -78,7 +77,7 @@ class CameraView
 		/**
 		* Cast initial ray from cam postion to view plane, jittering is an option.
 		*/
-		virtual Ray cast_ray(int _x, int _y, bool is_normalized, bool is_jitter);
+		virtual glm::vec3 cast_ray(int _x, int _y, bool is_normalized, bool is_jitter);
 
 		/**
 		* Set cam position.

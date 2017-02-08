@@ -24,17 +24,17 @@ bool CameraViewTest::do_test()
 
 	view.print_viewplane("../../output/view_test.csv");
 
-	Ray ray = view.cast_ray(0, 0, false, false);
+	glm::vec3 ray = view.cast_ray(0, 0, false, false);
 
-	ASSERT_EQUALS("Test cast ray without normalization x-coor.", -10.8239222f, ray.ray.x);
-	ASSERT_EQUALS("Test cast ray without normalization y-coor.", 10.8239222f, ray.ray.y);
-	ASSERT_EQUALS("Test cast ray without normalization z-coor.", -10.0000000f, ray.ray.z);
+	ASSERT_EQUALS("Test cast ray without normalization x-coor.", -10.8239222f, ray.x);
+	ASSERT_EQUALS("Test cast ray without normalization y-coor.", 10.8239222f, ray.y);
+	ASSERT_EQUALS("Test cast ray without normalization z-coor.", -10.0000000f, ray.z);
 
 	ray = view.cast_ray(0, 0, true, false);
 
-	ASSERT_EQUALS("Test cast ray with normalization x-coor.", -0.591979980f, ray.ray.x);
-	ASSERT_EQUALS("Test cast ray with normalization y-coor.", 0.591979980f, ray.ray.y);
-	ASSERT_EQUALS("Test cast ray with normalization z-coor.", -0.546918154f, ray.ray.z);
+	ASSERT_EQUALS("Test cast ray with normalization x-coor.", -0.591979980f, ray.x);
+	ASSERT_EQUALS("Test cast ray with normalization y-coor.", 0.591979980f, ray.y);
+	ASSERT_EQUALS("Test cast ray with normalization z-coor.", -0.546918154f, ray.z);
 
 	//glm::vec3 v1 = MathUtil::CAST_RAY_JITTER(glm::vec3(0.0f, 0.0f, 10.0f), glm::vec3(0.0f, 0.0f, 0.0f), 2.0f, 2.0f, true);
 

@@ -18,7 +18,7 @@ CameraView::~CameraView()
 	delete this->cam;
 }
 
-Ray CameraView::cast_ray(int _x, int _y, bool is_normalized, bool is_jitter)
+glm::vec3 CameraView::cast_ray(int _x, int _y, bool is_normalized, bool is_jitter)
 {
 	// TEST
 	glm::vec3 p1 = this->look_from;
@@ -26,7 +26,7 @@ Ray CameraView::cast_ray(int _x, int _y, bool is_normalized, bool is_jitter)
 	glm::vec3 ray = is_jitter ? MathUtil::CAST_RAY_JITTER(p1, p2, this->pixel_radius_x, this->pixel_radius_y, is_normalized) : MathUtil::CAST_RAY(p1, p2, is_normalized);
 
 	// WILL NEED TO DEFINE MORE PARAMETERS IN RAY INSTANCE AFTER DESIGNING THE CLASS MEMEBERS FOR RAY.
-	return Ray(ray);
+	return ray;
 }
 
 void CameraView::set_cam_pos(glm::vec3 _new_pos)
