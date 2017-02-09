@@ -35,10 +35,18 @@ bool CameraViewTest::do_test()
 	ASSERT_EQUALS("Test cast ray with normalization x-coor.", -0.591979980f, ray.x);
 	ASSERT_EQUALS("Test cast ray with normalization y-coor.", 0.591979980f, ray.y);
 	ASSERT_EQUALS("Test cast ray with normalization z-coor.", -0.546918154f, ray.z);
+	
+	ASSERT_EQUALS("Test view plane pixel x-coordinate.", -10.8239222f, view.get_pixel_coor(0, 0).x);
+	ASSERT_EQUALS("Test view plane pixel y-coordinate.", 10.8239222f, view.get_pixel_coor(0, 0).y);
 
-	//glm::vec3 v1 = MathUtil::CAST_RAY_JITTER(glm::vec3(0.0f, 0.0f, 10.0f), glm::vec3(0.0f, 0.0f, 0.0f), 2.0f, 2.0f, true);
+	ASSERT_EQUALS("Test view plane pixel x-coordinate.", 10.7806759f, view.get_pixel_coor(499, 0).x);
+	ASSERT_EQUALS("Test view plane pixel y-coordinate.", 10.8239222f, view.get_pixel_coor(499, 0).y);
 
-	//glm::vec3 v2 = MathUtil::CAST_RAY_JITTER(glm::vec3(0.0f, 0.0f, 10.0f), glm::vec3(-10.8239f, 10.8239f, 0.0f), 0.02165f, 0.02165f, true);
+	ASSERT_EQUALS("Test view plane pixel x-coordinate.", -10.823922f, view.get_pixel_coor(0, 499).x);
+	ASSERT_EQUALS("Test view plane pixel y-coordinate.", -10.7806759f, view.get_pixel_coor(0, 499).y);
+
+	ASSERT_EQUALS("Test view plane pixel x-coordinate.", 10.7806759f, view.get_pixel_coor(499, 499).x);
+	ASSERT_EQUALS("Test view plane pixel y-coordinate.", -10.7806759f, view.get_pixel_coor(499, 499).y);
 
 	return is_pass;
 }

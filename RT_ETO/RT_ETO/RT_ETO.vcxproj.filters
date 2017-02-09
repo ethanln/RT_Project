@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\math">
-      <UniqueIdentifier>{b374d5b4-1fc2-49bc-923b-eae062a0d02f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Test Files">
       <UniqueIdentifier>{ffa69553-526c-421d-8318-5a3e1bc725b6}</UniqueIdentifier>
     </Filter>
@@ -46,6 +43,51 @@
     <Filter Include="Source Files\ray_tracer\ray">
       <UniqueIdentifier>{6953c372-4077-43be-8684-6b5c1823a048}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Test Files\tests\headers">
+      <UniqueIdentifier>{ada4bd32-daec-474c-a6a1-d636dcebdd04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test Files\test_management\headers">
+      <UniqueIdentifier>{33f820fd-451c-4d7b-901d-612c7a444651}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\camera\headers">
+      <UniqueIdentifier>{0b5fcdaa-28a2-4240-a64c-258eeb2cff67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\file_system\headers">
+      <UniqueIdentifier>{f225ced9-ab8e-4415-ab44-61d6f806915a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\image\headers">
+      <UniqueIdentifier>{ea989b42-c064-4fa1-ad2b-750b2dc98fd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ray_tracer\ray\headers">
+      <UniqueIdentifier>{1851da12-4df1-4385-8a47-f47f7a5fe103}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ray_tracer\headers">
+      <UniqueIdentifier>{44ac35b5-e71c-42f4-8afe-a521972992d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\model">
+      <UniqueIdentifier>{9549c8f3-743b-46e9-9d4f-5dc0594d1508}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\model\shape">
+      <UniqueIdentifier>{9877580f-afde-424b-875c-2ed73d999b83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\model\shape\headers">
+      <UniqueIdentifier>{0d26fb8d-43b5-4580-b177-1e84100f968d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\model\scene">
+      <UniqueIdentifier>{8d21245d-d452-4b8e-b91b-20fe8d8b4bbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\model\scene\headers">
+      <UniqueIdentifier>{d0448010-891f-49c1-bfae-5063d139de31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{b374d5b4-1fc2-49bc-923b-eae062a0d02f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\util\headers">
+      <UniqueIdentifier>{b16197da-8b87-4098-98dc-2d7dc407a912}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\model\shape\interface">
+      <UniqueIdentifier>{ebeb5e16-538e-42fc-8a02-816ecfa79e72}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -60,56 +102,71 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TestFactory.h">
-      <Filter>Test Files\test_management</Filter>
-    </ClInclude>
-    <ClInclude Include="TestManager.h">
-      <Filter>Test Files\test_management</Filter>
-    </ClInclude>
-    <ClInclude Include="FileSystem.h">
-      <Filter>Source Files\file_system</Filter>
-    </ClInclude>
-    <ClInclude Include="Color.h">
-      <Filter>Source Files\image</Filter>
-    </ClInclude>
-    <ClInclude Include="ImageBuffer.h">
-      <Filter>Source Files\image</Filter>
-    </ClInclude>
-    <ClInclude Include="Test.h">
-      <Filter>Test Files\tests</Filter>
-    </ClInclude>
-    <ClInclude Include="Vec3Test.h">
-      <Filter>Test Files\tests</Filter>
-    </ClInclude>
-    <ClInclude Include="ColorTest.h">
-      <Filter>Test Files\tests</Filter>
-    </ClInclude>
-    <ClInclude Include="MathUtil.h">
-      <Filter>Source Files\math</Filter>
-    </ClInclude>
-    <ClInclude Include="ImageBufferTest.h">
-      <Filter>Test Files\tests</Filter>
-    </ClInclude>
-    <ClInclude Include="RayTracer.h">
-      <Filter>Source Files\ray_tracer</Filter>
-    </ClInclude>
     <ClInclude Include="IRayTracer.h">
       <Filter>Source Files\ray_tracer\interface</Filter>
     </ClInclude>
     <ClInclude Include="ITest.h">
       <Filter>Test Files\tests\interface</Filter>
     </ClInclude>
+    <ClInclude Include="CameraViewTest.h">
+      <Filter>Test Files\tests\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorTest.h">
+      <Filter>Test Files\tests\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageBufferTest.h">
+      <Filter>Test Files\tests\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Vec3Test.h">
+      <Filter>Test Files\tests\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Test.h">
+      <Filter>Test Files\tests\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="TestFactory.h">
+      <Filter>Test Files\test_management\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="TestManager.h">
+      <Filter>Test Files\test_management\headers</Filter>
+    </ClInclude>
     <ClInclude Include="Camera.h">
-      <Filter>Source Files\camera</Filter>
+      <Filter>Source Files\camera\headers</Filter>
     </ClInclude>
     <ClInclude Include="CameraView.h">
-      <Filter>Source Files\camera</Filter>
+      <Filter>Source Files\camera\headers</Filter>
     </ClInclude>
-    <ClInclude Include="CameraViewTest.h">
-      <Filter>Test Files\tests</Filter>
+    <ClInclude Include="FileSystem.h">
+      <Filter>Source Files\file_system\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Source Files\image\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageBuffer.h">
+      <Filter>Source Files\image\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="MathUtil.h">
+      <Filter>Source Files\util\headers</Filter>
     </ClInclude>
     <ClInclude Include="Ray.h">
-      <Filter>Source Files\ray_tracer\ray</Filter>
+      <Filter>Source Files\ray_tracer\ray\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="RayTracer.h">
+      <Filter>Source Files\ray_tracer\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="MathUtilTest.h">
+      <Filter>Test Files\tests\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangle.h">
+      <Filter>Source Files\model\shape\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>Source Files\model\shape\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="IShape.h">
+      <Filter>Source Files\model\shape\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>Source Files\model\shape\headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -141,7 +198,7 @@
       <Filter>Test Files\tests</Filter>
     </ClCompile>
     <ClCompile Include="MathUtil.cpp">
-      <Filter>Source Files\math</Filter>
+      <Filter>Source Files\util</Filter>
     </ClCompile>
     <ClCompile Include="FileSystem.cpp">
       <Filter>Source Files\file_system</Filter>
@@ -155,11 +212,23 @@
     <ClCompile Include="CameraView.cpp">
       <Filter>Source Files\camera</Filter>
     </ClCompile>
-    <ClCompile Include="CameraViewTestcpp.cpp">
-      <Filter>Test Files\tests</Filter>
-    </ClCompile>
     <ClCompile Include="Ray.cpp">
       <Filter>Source Files\ray_tracer\ray</Filter>
+    </ClCompile>
+    <ClCompile Include="MathUtilTest.cpp">
+      <Filter>Test Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraViewTest.cpp">
+      <Filter>Test Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Source Files\model\shape</Filter>
+    </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>Source Files\model\shape</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape.cpp">
+      <Filter>Source Files\model\shape</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

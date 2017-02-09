@@ -41,6 +41,10 @@ Test* TestFactory::_make_test(string key)
 	{
 		return new CameraViewTest();
 	}
+	else if (key == "MathUtilTest")
+	{
+		return new MathUtilTest();
+	}
 	return nullptr;
 }
 

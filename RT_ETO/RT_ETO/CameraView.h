@@ -110,6 +110,11 @@ class CameraView
 		virtual int get_dim_y();
 
 		/**
+		* Get coordinate at pixel location (x,y).
+		*/
+		virtual glm::vec3 get_pixel_coor(int _x, int _y);
+
+		/**
 		* Print view plane table;
 		*/
 		virtual void print_viewplane(string filename);

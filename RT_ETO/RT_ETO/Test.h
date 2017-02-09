@@ -58,6 +58,10 @@ class Test : public ITest
 
 		virtual void ASSERT_EQUALS(string msg, uint8_t val_1, uint8_t val_2);
 
+		virtual void ASSERT_GREATER_THAN_EQUAL(string msg, float val_1, float val_2);
+
+		virtual void ASSERT_LESS_THAN_EQUAL(string msg, float val_1, float val_2);
+
 		virtual void HEADER_PRINT(string msg);
 
 	protected:

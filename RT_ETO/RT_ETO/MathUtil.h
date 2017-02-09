@@ -5,6 +5,9 @@
 #include <math.h>
 #include <cstdlib>
 #include <ctime>
+#include "IShape.h"
+#include "Triangle.h"
+#include "Sphere.h"
 
 #pragma once
 
@@ -31,6 +34,16 @@ class MathUtil
 		* Global normalize function.
 		*/
 		static glm::vec3 NORMALIZE(glm::vec3 v);
+
+		/**
+		* Global get normal for triangles.
+		*/
+		static glm::vec3 GET_TRIANGLE_NORMAL(Triangle t, bool is_normalized);
+
+		/**
+		* Global get normal for sphere.
+		*/
+		static glm::vec3 GET_SPHERE_NORMAL(glm::vec3 intersection, Sphere s, bool is_normalized);
 
 		/**
 		* Global dot product function.

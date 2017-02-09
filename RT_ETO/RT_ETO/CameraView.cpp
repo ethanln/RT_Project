@@ -20,7 +20,6 @@ CameraView::~CameraView()
 
 glm::vec3 CameraView::cast_ray(int _x, int _y, bool is_normalized, bool is_jitter)
 {
-	// TEST
 	glm::vec3 p1 = this->look_from;
 	glm::vec3 p2 = this->view_plane.at(_y).at(_x);
 	glm::vec3 ray = is_jitter ? MathUtil::CAST_RAY_JITTER(p1, p2, this->pixel_radius_x, this->pixel_radius_y, is_normalized) : MathUtil::CAST_RAY(p1, p2, is_normalized);
@@ -57,6 +56,11 @@ int CameraView::get_dim_x()
 int CameraView::get_dim_y()
 {
 	return this->dim_y;
+}
+
+glm::vec3 CameraView::get_pixel_coor(int _x, int _y)
+{
+	return this->view_plane.at(_y).at(_x);
 }
 
 void CameraView::print_viewplane(string filename)

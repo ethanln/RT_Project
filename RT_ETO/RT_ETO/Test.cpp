@@ -64,6 +64,16 @@ void Test::ASSERT_EQUALS(string msg, uint8_t val_1, uint8_t val_2)
 	this->print_message(msg, val_1 == val_2);
 }
 
+void Test::ASSERT_GREATER_THAN_EQUAL(string msg, float val_1, float val_2)
+{
+	this->print_message(msg, val_1 >= val_2);
+}
+
+void Test::ASSERT_LESS_THAN_EQUAL(string msg, float val_1, float val_2)
+{
+	this->print_message(msg, val_1 <= val_2);
+}
+
 void Test::HEADER_PRINT(string msg)
 {
 	this->set_color(COLOR::CYAN);
