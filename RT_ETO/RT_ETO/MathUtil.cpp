@@ -7,21 +7,6 @@ float MathUtil::PI = 3.14159265;
 
 bool MathUtil::IS_SEED_GENERATED = false;
 
-glm::vec3 MathUtil::NORMALIZE(glm::vec3 v)
-{
-	float dx = powf(v.x, 2.0f);
-	float dy = powf(v.y, 2.0f);
-	float dz = powf(v.z, 2.0f);
-
-	float c = sqrtf(dx + dy + dz);
-
-	float nx = v.x / c;
-	float ny = v.y / c;
-	float nz = v.z / c;
-
-	return glm::vec3(nx, ny, nz);
-}
-
 glm::vec3 MathUtil::GET_TRIANGLE_NORMAL(Triangle t, bool is_normalized)
 {
 	// TEST
@@ -32,7 +17,7 @@ glm::vec3 MathUtil::GET_TRIANGLE_NORMAL(Triangle t, bool is_normalized)
 	float yn = (e1.z * e2.x) - (e2.z * e1.x);
 	float zn = (e1.x * e2.y) - (e2.x * e1.y);
 
-	glm::vec3 vec = is_normalized ? MathUtil::NORMALIZE(glm::vec3(xn, yn, zn)) : glm::vec3(xn, yn, zn);
+	glm::vec3 vec = is_normalized ? VecUtil::NORMALIZE(glm::vec3(xn, yn, zn)) : glm::vec3(xn, yn, zn);
 
 	return vec;
 }
@@ -40,18 +25,8 @@ glm::vec3 MathUtil::GET_TRIANGLE_NORMAL(Triangle t, bool is_normalized)
 glm::vec3 MathUtil::GET_SPHERE_NORMAL(glm::vec3 intersection, Sphere s, bool is_normalized)
 {
 	// TEST
-	glm::vec3 vec = is_normalized ? MathUtil::NORMALIZE(intersection - s.center) : intersection - s.center;
+	glm::vec3 vec = is_normalized ? VecUtil::NORMALIZE(intersection - s.center) : intersection - s.center;
 	return vec;
-}
-
-float MathUtil::DOT(glm::vec3 v1, glm::vec3 v2)
-{
-	return (v1.x * v2.x) + (v1.y * v2.y) + (v1.z * v2.z);
-}
-
-float MathUtil::MAG(glm::vec3 v)
-{
-	return sqrt(pow(v.x, 2.0f) + pow(v.y, 2.0f) + pow(v.z, 2.0f));
 }
 
 float MathUtil::TO_RADIANS(float degree)
@@ -67,7 +42,7 @@ float MathUtil::TO_DEGREES(float radians)
 glm::vec3 MathUtil::CAST_RAY(glm::vec3 p1, glm::vec3 p2, bool is_normalized)
 {
 	// Calculate ray, and normalize it if flagged to do so.
-	glm::vec3 ray = is_normalized ? MathUtil::NORMALIZE(p2 - p1) : p2 - p1;
+	glm::vec3 ray = is_normalized ? VecUtil::NORMALIZE(p2 - p1) : p2 - p1;
 	return ray;
 }
 
@@ -88,7 +63,7 @@ glm::vec3 MathUtil::CAST_RAY_JITTER(glm::vec3 p1, glm::vec3 p2, float radius_x, 
 	glm::vec3 variation_coor = glm::vec3(variation_X, variation_Y, p2.z);
 
 	// Calculate ray, and normalize it if flagged to do so.
-	glm::vec3 ray = is_normalized ? MathUtil::NORMALIZE(variation_coor - p1) : variation_coor - p1;
+	glm::vec3 ray = is_normalized ? VecUtil::NORMALIZE(variation_coor - p1) : variation_coor - p1;
 	return ray;
 }
 

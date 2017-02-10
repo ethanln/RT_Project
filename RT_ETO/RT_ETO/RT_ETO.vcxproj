@@ -172,6 +172,7 @@
     <ClInclude Include="TestManager.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vec3Test.h" />
+    <ClInclude Include="VecUtil.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
@@ -199,6 +200,7 @@
     <ClCompile Include="TestManager.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Vec3Test.cpp" />
+    <ClCompile Include="VecUtil.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="RT_ETO.rc" />

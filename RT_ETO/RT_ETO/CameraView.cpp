@@ -81,7 +81,7 @@ void CameraView::print_viewplane(string filename)
 
 void CameraView::setup_view_plane_coor()
 {
-	float z = MathUtil::MAG(this->look_from - this->look_at);
+	float z = VecUtil::MAG(this->look_from - this->look_at);
 
 	// Get the maximum x and y value of the view plane.
 	float max_x = z / cos(MathUtil::TO_RADIANS(this->fov / 2.0f));

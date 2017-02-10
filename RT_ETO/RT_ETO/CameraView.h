@@ -11,6 +11,7 @@
 #include <string>
 #include "Camera.h"
 #include "MathUtil.h"
+#include "VecUtil.h"
 
 using namespace std;
 

@@ -5,6 +5,7 @@
 #include <math.h>
 #include <cstdlib>
 #include <ctime>
+#include "VecUtil.h"
 #include "IShape.h"
 #include "Triangle.h"
 #include "Sphere.h"
@@ -29,11 +30,6 @@ class MathUtil
 		static float PI;
 
 	public:
-	
-		/**
-		* Global normalize function.
-		*/
-		static glm::vec3 NORMALIZE(glm::vec3 v);
 
 		/**
 		* Global get normal for triangles.
@@ -44,16 +40,6 @@ class MathUtil
 		* Global get normal for sphere.
 		*/
 		static glm::vec3 GET_SPHERE_NORMAL(glm::vec3 intersection, Sphere s, bool is_normalized);
-
-		/**
-		* Global dot product function.
-		*/
-		static float DOT(glm::vec3 v1, glm::vec3 v2);
-
-		/**
-		* Global magnitude function.
-		*/
-		static float MAG(glm::vec3 v);
 
 		/**
 		* Global to radians.

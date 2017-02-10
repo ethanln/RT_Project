@@ -55,11 +55,11 @@ bool Vec3Test::do_test()
 	this->ASSERT_EQUALS("Vec3 basic divide arithmetic test vec.z", v3.z, 4.0f);
 	
 	// TEST VEC3 DOT
-	float dot_product = MathUtil::DOT(v3, v3);
+	float dot_product = VecUtil::DOT(v3, v3);
 	this->ASSERT_EQUALS("Vec3 dot product", dot_product, 48.0f);
 
 	// TEST VEC3 NORMALIZE
-	v3 = MathUtil::NORMALIZE(v3);
+	v3 = VecUtil::NORMALIZE(v3);
 
 	this->ASSERT_EQUALS("Vec3 basic divide arithmetic test ved.x", v3.x, 0.577350259f);
 	this->ASSERT_EQUALS("Vec3 basic divide arithmetic test ved.y", v3.y, 0.577350259f);
