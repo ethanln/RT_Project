@@ -30,7 +30,7 @@ void Test::print_message(string msg, bool is_pass)
 	}
 
 	this->set_color(COLOR::YELLOW);
-	cout << "\t\t..." << msg << endl;
+	cout << "\t..." << msg << endl;
 	this->set_color(COLOR::DEFAULT_WHITE);
 }
 

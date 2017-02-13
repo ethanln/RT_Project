@@ -159,9 +159,10 @@
     <ClInclude Include="IShape.h" />
     <ClInclude Include="ITest.h" />
     <ClInclude Include="MathUtil.h" />
-    <ClInclude Include="MathUtilTest.h" />
+    <ClInclude Include="RayUtilTest.h" />
     <ClInclude Include="Ray.h" />
     <ClInclude Include="RayTracer.h" />
+    <ClInclude Include="RayUtil.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="Sphere.h" />
@@ -185,8 +186,9 @@
     <ClCompile Include="ImageBuffer.cpp" />
     <ClCompile Include="ImageBufferTest.cpp" />
     <ClCompile Include="MathUtil.cpp" />
-    <ClCompile Include="MathUtilTest.cpp" />
+    <ClCompile Include="RayUtilTest.cpp" />
     <ClCompile Include="Ray.cpp" />
+    <ClCompile Include="RayUtil.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="Sphere.cpp" />
     <ClCompile Include="stdafx.cpp">

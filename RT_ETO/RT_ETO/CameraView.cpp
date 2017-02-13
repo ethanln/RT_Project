@@ -22,7 +22,7 @@ glm::vec3 CameraView::cast_ray(int _x, int _y, bool is_normalized, bool is_jitte
 {
 	glm::vec3 p1 = this->look_from;
 	glm::vec3 p2 = this->view_plane.at(_y).at(_x);
-	glm::vec3 ray = is_jitter ? MathUtil::CAST_RAY_JITTER(p1, p2, this->pixel_radius_x, this->pixel_radius_y, is_normalized) : MathUtil::CAST_RAY(p1, p2, is_normalized);
+	glm::vec3 ray = is_jitter ? RayUtil::CAST_RAY_JITTER(p1, p2, this->pixel_radius_x, this->pixel_radius_y, is_normalized) : RayUtil::CAST_RAY(p1, p2, is_normalized);
 
 	// WILL NEED TO DEFINE MORE PARAMETERS IN RAY INSTANCE AFTER DESIGNING THE CLASS MEMEBERS FOR RAY.
 	return ray;

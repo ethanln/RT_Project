@@ -153,9 +153,6 @@
     <ClInclude Include="RayTracer.h">
       <Filter>Source Files\ray_tracer\headers</Filter>
     </ClInclude>
-    <ClInclude Include="MathUtilTest.h">
-      <Filter>Test Files\tests\headers</Filter>
-    </ClInclude>
     <ClInclude Include="Triangle.h">
       <Filter>Source Files\model\shape\headers</Filter>
     </ClInclude>
@@ -170,6 +167,12 @@
     </ClInclude>
     <ClInclude Include="VecUtil.h">
       <Filter>Source Files\util\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="RayUtil.h">
+      <Filter>Source Files\util\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="RayUtilTest.h">
+      <Filter>Test Files\tests\headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -218,9 +221,6 @@
     <ClCompile Include="Ray.cpp">
       <Filter>Source Files\ray_tracer\ray</Filter>
     </ClCompile>
-    <ClCompile Include="MathUtilTest.cpp">
-      <Filter>Test Files\tests</Filter>
-    </ClCompile>
     <ClCompile Include="CameraViewTest.cpp">
       <Filter>Test Files\tests</Filter>
     </ClCompile>
@@ -235,6 +235,12 @@
     </ClCompile>
     <ClCompile Include="VecUtil.cpp">
       <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="RayUtil.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="RayUtilTest.cpp">
+      <Filter>Test Files\tests</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
