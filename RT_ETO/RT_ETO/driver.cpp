@@ -17,7 +17,7 @@ int main(int argc, const char * argv[])
 	{
 		// run tests.
 		TestManager* tests = new TestManager();
-		tests->loadTests({ "Vec3Test", "ColorTest", "ImageBufferTest", "CameraViewTest", "RayUtilTest" });
+		tests->loadTests({ "Vec3Test", "ColorTest", "ImageBufferTest", "CameraViewTest", "RayUtilTest", "MathUtilTest" });
 		tests->runTests();
 	}
 	else 

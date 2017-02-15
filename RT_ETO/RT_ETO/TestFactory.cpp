@@ -45,6 +45,10 @@ Test* TestFactory::_make_test(string key)
 	{
 		return new RayUtilTest();
 	}
+	else if (key == "MathUtilTest")
+	{
+		return new MathUtilTest();
+	}
 	return nullptr;
 }
 

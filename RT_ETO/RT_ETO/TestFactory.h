@@ -10,6 +10,7 @@
 #include "ImageBufferTest.h"
 #include "CameraViewTest.h"
 #include "RayUtilTest.h"
+#include "MathUtilTest.h"
 
 using namespace std;
 
