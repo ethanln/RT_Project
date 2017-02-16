@@ -6,7 +6,7 @@ bool RayUtil::IS_SEED_GENERATED = false;
 glm::vec3 RayUtil::CAST_RAY(glm::vec3 p1, glm::vec3 p2, bool is_normalized)
 {
 	// Calculate ray, and normalize it if flagged to do so.
-	glm::vec3 ray = is_normalized ? VecUtil::NORMALIZE(p2 - p1) : p2 - p1;
+	glm::vec3 ray = is_normalized ? Vec3Util::NORMALIZE(p2 - p1) : p2 - p1;
 	return ray;
 }
 
@@ -27,7 +27,7 @@ glm::vec3 RayUtil::CAST_RAY_JITTER(glm::vec3 p1, glm::vec3 p2, float radius_x, f
 	glm::vec3 variation_coor = glm::vec3(variation_X, variation_Y, p2.z);
 
 	// Calculate ray, and normalize it if flagged to do so.
-	glm::vec3 ray = is_normalized ? VecUtil::NORMALIZE(variation_coor - p1) : variation_coor - p1;
+	glm::vec3 ray = is_normalized ? Vec3Util::NORMALIZE(variation_coor - p1) : variation_coor - p1;
 	return ray;
 }
 

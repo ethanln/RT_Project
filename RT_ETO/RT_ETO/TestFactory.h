@@ -11,6 +11,7 @@
 #include "CameraViewTest.h"
 #include "RayUtilTest.h"
 #include "MathUtilTest.h"
+#include "ShapeUtilTest.h"
 
 using namespace std;
 

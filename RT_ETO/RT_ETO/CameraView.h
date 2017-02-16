@@ -10,7 +10,7 @@
 #include <iostream>
 #include <string>
 #include "Camera.h"
-#include "VecUtil.h"
+#include "Vec3Util.h"
 #include "RayUtil.h"
 
 using namespace std;

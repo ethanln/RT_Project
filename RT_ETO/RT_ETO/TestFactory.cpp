@@ -49,6 +49,10 @@ Test* TestFactory::_make_test(string key)
 	{
 		return new MathUtilTest();
 	}
+	else if (key == "ShapeUtilTest")
+	{
+		return new ShapeUtilTest();
+	}
 	return nullptr;
 }
 

@@ -165,9 +165,6 @@
     <ClInclude Include="Shape.h">
       <Filter>Source Files\model\shape\headers</Filter>
     </ClInclude>
-    <ClInclude Include="VecUtil.h">
-      <Filter>Source Files\util\headers</Filter>
-    </ClInclude>
     <ClInclude Include="RayUtil.h">
       <Filter>Source Files\util\headers</Filter>
     </ClInclude>
@@ -179,6 +176,12 @@
     </ClInclude>
     <ClInclude Include="MathUtilTest.h">
       <Filter>Test Files\tests\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ShapeUtilTest.h">
+      <Filter>Test Files\tests\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Vec3Util.h">
+      <Filter>Source Files\util\headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -239,9 +242,6 @@
     <ClCompile Include="Shape.cpp">
       <Filter>Source Files\model\shape</Filter>
     </ClCompile>
-    <ClCompile Include="VecUtil.cpp">
-      <Filter>Source Files\util</Filter>
-    </ClCompile>
     <ClCompile Include="RayUtil.cpp">
       <Filter>Source Files\util</Filter>
     </ClCompile>
@@ -253,6 +253,12 @@
     </ClCompile>
     <ClCompile Include="MathUtilTest.cpp">
       <Filter>Test Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="ShapeUtilTest.cpp">
+      <Filter>Test Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Vec3Util.cpp">
+      <Filter>Source Files\util</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

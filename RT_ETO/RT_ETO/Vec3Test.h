@@ -4,7 +4,7 @@
 #define VEC3_TEST_H
 
 #include "Test.h"
-#include "VecUtil.h"
+#include "Vec3Util.h"
 #include <glm/vec3.hpp>
 
 using namespace std;

@@ -4,7 +4,7 @@
 
 #include "Triangle.h"
 #include "Sphere.h"
-#include "VecUtil.h"
+#include "Vec3Util.h"
 #include <glm/vec3.hpp>
 
 using namespace std;

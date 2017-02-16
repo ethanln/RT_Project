@@ -1,3 +1,4 @@
+#pragma once
 #ifndef MATH_UTIL_H
 #define MATH_UTIL_H
 
@@ -5,7 +6,7 @@
 #include <math.h>
 #include <cstdlib>
 #include <ctime>
-#include "VecUtil.h"
+#include "Vec3Util.h"
 #include "IShape.h"
 #include "Triangle.h"
 #include "Sphere.h"
