@@ -5,6 +5,7 @@
 #include "Test.h"
 #include "ImageBuffer.h"
 #include "FileSystem.h"
+#include "ImageBuffer.h"
 
 using namespace std;
 

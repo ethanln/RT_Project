@@ -3,6 +3,8 @@
 
 #include <vector>
 #include <array>
+#include <sstream>
+#include "ImageBufferException.h"
 #include "Color.h"
 #pragma once
 
@@ -30,7 +32,7 @@ class ImageBuffer
 		/**
 		* Initializes the image buffer, called from the constructor.
 		*/
-		virtual void initiate_buffer(Color* color);
+		virtual void initiate_buffer(Color color);
 
 	public:
 
@@ -42,7 +44,7 @@ class ImageBuffer
 		/**
 		* ImageBuffer Constructor.
 		*/
-		ImageBuffer(int _dim_x, int _dim_y, Color* c);
+		ImageBuffer(int _dim_x, int _dim_y, Color c);
 
 		/**
 		* ImageBuffer Deconstructor.
@@ -52,12 +54,12 @@ class ImageBuffer
 		/**
 		* Updates pixel value at x and y position.
 		*/
-		virtual void update_pixel(Color* color, int x, int y);
+		virtual void update_pixel(Color color, int x, int y) throw(ImageBufferException);
 
 		/**
 		* Fetches pixel value from buffer.
 		*/
-		virtual Color* get_pixel(int x, int y);
+		virtual Color* get_pixel(int x, int y) throw(ImageBufferException);
 
 		/**
 		* Fetches x dimension.

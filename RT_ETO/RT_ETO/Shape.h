@@ -1,13 +1,12 @@
 #pragma once
-#ifndef GEO_SHAPE_H
-#define GEO_SHAPE_H
+#ifndef SHAPE_H
+#define SHAPE_H
 
 #include <glm/vec3.hpp>
-#include "IShape.h"
 
 using namespace std;
 
-class Shape : public IShape
+class Shape
 {
 	public:
 		enum SHAPE_TYPE
@@ -29,5 +28,6 @@ class Shape : public IShape
 		* Shape deconstructor.
 		*/
 		virtual ~Shape();
+
 };
 #endif

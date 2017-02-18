@@ -31,9 +31,6 @@
     <Filter Include="Source Files\ray_tracer">
       <UniqueIdentifier>{447159bf-02c9-4bff-afb3-e225c0dbe567}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\camera">
-      <UniqueIdentifier>{081146ef-fcb5-4c90-83ce-fcb6a99ff9c5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\ray_tracer\interface">
       <UniqueIdentifier>{0f027463-73e9-4408-9b7d-e021a3a7fafc}</UniqueIdentifier>
     </Filter>
@@ -48,9 +45,6 @@
     </Filter>
     <Filter Include="Test Files\test_management\headers">
       <UniqueIdentifier>{33f820fd-451c-4d7b-901d-612c7a444651}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\camera\headers">
-      <UniqueIdentifier>{0b5fcdaa-28a2-4240-a64c-258eeb2cff67}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\file_system\headers">
       <UniqueIdentifier>{f225ced9-ab8e-4415-ab44-61d6f806915a}</UniqueIdentifier>
@@ -73,20 +67,23 @@
     <Filter Include="Source Files\model\shape\headers">
       <UniqueIdentifier>{0d26fb8d-43b5-4580-b177-1e84100f968d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\model\scene">
-      <UniqueIdentifier>{8d21245d-d452-4b8e-b91b-20fe8d8b4bbc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\model\scene\headers">
-      <UniqueIdentifier>{d0448010-891f-49c1-bfae-5063d139de31}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\util">
       <UniqueIdentifier>{b374d5b4-1fc2-49bc-923b-eae062a0d02f}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\util\headers">
       <UniqueIdentifier>{b16197da-8b87-4098-98dc-2d7dc407a912}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\model\shape\interface">
-      <UniqueIdentifier>{ebeb5e16-538e-42fc-8a02-816ecfa79e72}</UniqueIdentifier>
+    <Filter Include="Source Files\exception">
+      <UniqueIdentifier>{e170b149-bf41-44e7-bd39-46245797d3bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\exception\header">
+      <UniqueIdentifier>{fc30a1c0-0587-4c4e-bf46-a197f8e7c40a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\model\camera">
+      <UniqueIdentifier>{081146ef-fcb5-4c90-83ce-fcb6a99ff9c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\model\camera\headers">
+      <UniqueIdentifier>{0b5fcdaa-28a2-4240-a64c-258eeb2cff67}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -130,10 +127,10 @@
       <Filter>Test Files\test_management\headers</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
-      <Filter>Source Files\camera\headers</Filter>
+      <Filter>Source Files\model\camera\headers</Filter>
     </ClInclude>
     <ClInclude Include="CameraView.h">
-      <Filter>Source Files\camera\headers</Filter>
+      <Filter>Source Files\model\camera\headers</Filter>
     </ClInclude>
     <ClInclude Include="FileSystem.h">
       <Filter>Source Files\file_system\headers</Filter>
@@ -159,9 +156,6 @@
     <ClInclude Include="Sphere.h">
       <Filter>Source Files\model\shape\headers</Filter>
     </ClInclude>
-    <ClInclude Include="IShape.h">
-      <Filter>Source Files\model\shape\interface</Filter>
-    </ClInclude>
     <ClInclude Include="Shape.h">
       <Filter>Source Files\model\shape\headers</Filter>
     </ClInclude>
@@ -182,6 +176,9 @@
     </ClInclude>
     <ClInclude Include="Vec3Util.h">
       <Filter>Source Files\util\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageBufferException.h">
+      <Filter>Source Files\exception\header</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -222,10 +219,10 @@
       <Filter>Test Files\tests</Filter>
     </ClCompile>
     <ClCompile Include="Camera.cpp">
-      <Filter>Source Files\camera</Filter>
+      <Filter>Source Files\model\camera</Filter>
     </ClCompile>
     <ClCompile Include="CameraView.cpp">
-      <Filter>Source Files\camera</Filter>
+      <Filter>Source Files\model\camera</Filter>
     </ClCompile>
     <ClCompile Include="Ray.cpp">
       <Filter>Source Files\ray_tracer\ray</Filter>
@@ -259,6 +256,9 @@
     </ClCompile>
     <ClCompile Include="Vec3Util.cpp">
       <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageBufferException.cpp">
+      <Filter>Source Files\exception</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

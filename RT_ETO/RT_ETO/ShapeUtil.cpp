@@ -17,7 +17,6 @@ glm::vec3 ShapeUtil::GET_TRIANGLE_NORMAL(Triangle t, bool is_normalized)
 
 glm::vec3 ShapeUtil::GET_SPHERE_NORMAL(glm::vec3 intersection, Sphere s, bool is_normalized)
 {
-	// TEST
 	glm::vec3 vec = is_normalized ? Vec3Util::NORMALIZE(intersection - s.center) : intersection - s.center;
 	return vec;
 }

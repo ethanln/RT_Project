@@ -153,10 +153,10 @@
     <ClInclude Include="Color.h" />
     <ClInclude Include="ColorTest.h" />
     <ClInclude Include="FileSystem.h" />
+    <ClInclude Include="ImageBufferException.h" />
     <ClInclude Include="ImageBufferTest.h" />
     <ClInclude Include="ImageBuffer.h" />
     <ClInclude Include="IRayTracer.h" />
-    <ClInclude Include="IShape.h" />
     <ClInclude Include="ITest.h" />
     <ClInclude Include="MathUtil.h" />
     <ClInclude Include="MathUtilTest.h" />
@@ -187,6 +187,7 @@
     <ClCompile Include="driver.cpp" />
     <ClCompile Include="FileSystem.cpp" />
     <ClCompile Include="ImageBuffer.cpp" />
+    <ClCompile Include="ImageBufferException.cpp" />
     <ClCompile Include="ImageBufferTest.cpp" />
     <ClCompile Include="MathUtil.cpp" />
     <ClCompile Include="MathUtilTest.cpp" />

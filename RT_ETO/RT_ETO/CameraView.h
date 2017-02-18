@@ -41,12 +41,12 @@ class CameraView
 		/**
 		* Dimension X
 		*/
-		float dim_x;
+		int dim_x;
 
 		/**
 		* Dimension Y
 		*/
-		float dim_y;
+		int dim_y;
 
 		/**
 		* Field of view.
@@ -68,7 +68,7 @@ class CameraView
 		/**
 		* CameraView constructor.
 		*/
-		CameraView(glm::vec3 _pos, glm::vec3 _orientation, glm::vec3 _look_from, glm::vec3 _look_at, float _dim_x, float _dim_y, float _fov);
+		CameraView(glm::vec3 _pos, glm::vec3 _orientation, glm::vec3 _look_from, glm::vec3 _look_at, int _dim_x, int _dim_y, float _fov);
 
 		/**
 		* CameraView deconstructor.
@@ -78,7 +78,7 @@ class CameraView
 		/**
 		* Cast initial ray from cam postion to view plane, jittering is an option.
 		*/
-		virtual glm::vec3 cast_ray(int _x, int _y, bool is_normalized, bool is_jitter);
+		virtual glm::vec3 get_initial_ray(int _x, int _y, bool is_normalized, bool is_jitter);
 
 		/**
 		* Set cam position.

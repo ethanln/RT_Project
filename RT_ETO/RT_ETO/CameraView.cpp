@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "CameraView.h"
 
-CameraView::CameraView(glm::vec3 _pos, glm::vec3 _orientation, glm::vec3 _look_from, glm::vec3 _look_at, float _dim_x, float _dim_y, float _fov)
+CameraView::CameraView(glm::vec3 _pos, glm::vec3 _orientation, glm::vec3 _look_from, glm::vec3 _look_at, int _dim_x, int _dim_y, float _fov)
 {
 	this->cam = new Camera(_pos, _orientation);
 	this->look_from = _look_from;
@@ -18,7 +18,7 @@ CameraView::~CameraView()
 	delete this->cam;
 }
 
-glm::vec3 CameraView::cast_ray(int _x, int _y, bool is_normalized, bool is_jitter)
+glm::vec3 CameraView::get_initial_ray(int _x, int _y, bool is_normalized, bool is_jitter)
 {
 	glm::vec3 p1 = this->look_from;
 	glm::vec3 p2 = this->view_plane.at(_y).at(_x);

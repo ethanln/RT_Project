@@ -37,7 +37,7 @@ class RayUtil
 		/**
 		* Global get vector refraction ray.
 		*/
-		static glm::vec3 CAST_RAY_REFRACTION_GLOSS();
+		static glm::vec3 CAST_RAY_REFRACTION();
 
 		/**
 		* Set random seed generator.

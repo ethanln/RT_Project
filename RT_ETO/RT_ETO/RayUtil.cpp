@@ -43,7 +43,7 @@ glm::vec3 RayUtil::CAST_RAY_REFLECTION_GLOSS()
 	return glm::vec3(0.0f, 0.0f, 0.0f);
 }
 
-glm::vec3 RayUtil::CAST_RAY_REFRACTION_GLOSS()
+glm::vec3 RayUtil::CAST_RAY_REFRACTION()
 {
 	// IMPLEMENT, will do this after testing JITTERING
 	return glm::vec3(0.0f, 0.0f, 0.0f);
