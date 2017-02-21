@@ -180,6 +180,12 @@
     <ClInclude Include="ImageBufferException.h">
       <Filter>Source Files\exception\header</Filter>
     </ClInclude>
+    <ClInclude Include="ShapeException.h">
+      <Filter>Source Files\exception\header</Filter>
+    </ClInclude>
+    <ClInclude Include="ShapeTest.h">
+      <Filter>Test Files\tests\headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -259,6 +265,12 @@
     </ClCompile>
     <ClCompile Include="ImageBufferException.cpp">
       <Filter>Source Files\exception</Filter>
+    </ClCompile>
+    <ClCompile Include="ShapeException.cpp">
+      <Filter>Source Files\exception</Filter>
+    </ClCompile>
+    <ClCompile Include="ShapeTest.cpp">
+      <Filter>Test Files\tests</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

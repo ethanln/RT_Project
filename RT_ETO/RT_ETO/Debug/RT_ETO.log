@@ -1,50 +1,5 @@
-﻿Build started 2/18/2017 6:19:25 AM.
-     1>Project "C:\Users\Ethan\Desktop\development\RayTracer\RT_ETO\RT_ETO\RT_ETO.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /IC:\Users\Ethan\Desktop\development\RayTracer\libs\glm /I"C:\Users\Ethan\Desktop\development\RayTracer\libs\cpp-colors" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_DEPRECATE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\RT_ETO.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt CameraView.cpp CameraViewTest.cpp TestFactory.cpp TestManager.cpp driver.cpp
-         CameraViewTest.cpp
-         CameraView.cpp
-     1>c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\cameraview.cpp(70): warning C4018: '<': signed/unsigned mismatch
-     1>c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\cameraview.cpp(72): warning C4018: '<': signed/unsigned mismatch
-     1>c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\cameraview.cpp(100): warning C4552: '-': operator has no effect; expected operator with side-effect
-     1>c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\cameraview.cpp(106): warning C4018: '<': signed/unsigned mismatch
-     1>c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\cameraview.cpp(109): warning C4018: '<': signed/unsigned mismatch
-         Generating Code...
-         Skipping... (no relevant changes detected)
-         driver.cpp
-         TestManager.cpp
-         TestFactory.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ethan\Desktop\development\RayTracer\RT_ETO\Debug\RT_ETO.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Ethan\Desktop\development\RayTracer\RT_ETO\Debug\RT_ETO.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ethan\Desktop\development\RayTracer\RT_ETO\Debug\RT_ETO.lib" /MACHINE:X86 Debug\RT_ETO.res
-         Debug\Camera.obj
-         Debug\CameraView.obj
-         Debug\CameraViewTest.obj
-         Debug\Color.obj
-         Debug\ColorTest.obj
-         Debug\driver.obj
-         Debug\FileSystem.obj
-         Debug\ImageBuffer.obj
-         Debug\ImageBufferException.obj
-         Debug\ImageBufferTest.obj
-         Debug\MathUtil.obj
-         Debug\MathUtilTest.obj
-         Debug\RayUtilTest.obj
-         Debug\Ray.obj
-         Debug\RayUtil.obj
-         Debug\Shape.obj
-         Debug\ShapeUtil.obj
-         Debug\ShapeUtilTest.obj
-         Debug\Sphere.obj
-         Debug\stdafx.obj
-         Debug\Test.obj
-         Debug\TestFactory.obj
-         Debug\TestManager.obj
-         Debug\Triangle.obj
-         Debug\Vec3Test.obj
-         Debug\Vec3Util.obj
-         RT_ETO.vcxproj -> C:\Users\Ethan\Desktop\development\RayTracer\RT_ETO\Debug\RT_ETO.exe
-     1>Done Building Project "C:\Users\Ethan\Desktop\development\RayTracer\RT_ETO\RT_ETO\RT_ETO.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:08.32
+﻿  ShapeTest.cpp
+c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\shape.h(41): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\shape.h(46): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+  RT_ETO.vcxproj -> C:\Users\Ethan\Desktop\development\RayTracer\RT_ETO\Debug\RT_ETO.exe
+  RT_ETO.vcxproj -> C:\Users\Ethan\Desktop\development\RayTracer\RT_ETO\Debug\RT_ETO.pdb (Full PDB)

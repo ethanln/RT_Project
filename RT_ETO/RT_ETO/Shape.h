@@ -2,7 +2,11 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 
+#include "ShapeException.h"
 #include <glm/vec3.hpp>
+#include <exception>
+#include <string>
+#include <map>
 
 using namespace std;
 
@@ -17,6 +21,8 @@ class Shape
 
 		SHAPE_TYPE shape_type;
 
+		map<string, string> materials;
+
 	public:
 
 		/**
@@ -28,6 +34,16 @@ class Shape
 		* Shape deconstructor.
 		*/
 		virtual ~Shape();
+
+		/**
+		* Add material to shape.
+		*/
+		virtual void add_material(string key, string value) throw(ShapeException);
+
+		/**
+		* Get material from shape.
+		*/
+		virtual string get_material(string key) throw(ShapeException);
 
 };
 #endif

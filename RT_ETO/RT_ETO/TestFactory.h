@@ -12,6 +12,7 @@
 #include "RayUtilTest.h"
 #include "MathUtilTest.h"
 #include "ShapeUtilTest.h"
+#include "ShapeTest.h"
 
 using namespace std;
 
