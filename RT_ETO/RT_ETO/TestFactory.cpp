@@ -57,6 +57,10 @@ Test* TestFactory::_make_test(string key)
 	{
 		return new ShapeTest();
 	}
+	else if (key == "FileSystemTest")
+	{
+		return new FileSystemTest();
+	}
 	return nullptr;
 }
 

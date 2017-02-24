@@ -58,15 +58,6 @@
     <Filter Include="Source Files\ray_tracer\headers">
       <UniqueIdentifier>{44ac35b5-e71c-42f4-8afe-a521972992d5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\model">
-      <UniqueIdentifier>{9549c8f3-743b-46e9-9d4f-5dc0594d1508}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\model\shape">
-      <UniqueIdentifier>{9877580f-afde-424b-875c-2ed73d999b83}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\model\shape\headers">
-      <UniqueIdentifier>{0d26fb8d-43b5-4580-b177-1e84100f968d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\util">
       <UniqueIdentifier>{b374d5b4-1fc2-49bc-923b-eae062a0d02f}</UniqueIdentifier>
     </Filter>
@@ -79,11 +70,26 @@
     <Filter Include="Source Files\exception\header">
       <UniqueIdentifier>{fc30a1c0-0587-4c4e-bf46-a197f8e7c40a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\model\camera">
+    <Filter Include="Source Files\scene">
+      <UniqueIdentifier>{9549c8f3-743b-46e9-9d4f-5dc0594d1508}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\shape">
+      <UniqueIdentifier>{9877580f-afde-424b-875c-2ed73d999b83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\shape\headers">
+      <UniqueIdentifier>{0d26fb8d-43b5-4580-b177-1e84100f968d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\camera">
       <UniqueIdentifier>{081146ef-fcb5-4c90-83ce-fcb6a99ff9c5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\model\camera\headers">
+    <Filter Include="Source Files\scene\camera\headers">
       <UniqueIdentifier>{0b5fcdaa-28a2-4240-a64c-258eeb2cff67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\headers">
+      <UniqueIdentifier>{77291dfd-0356-4d99-9278-4a2effaa6ee3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\controller">
+      <UniqueIdentifier>{a540cec4-155a-4988-9591-2057abbd8d00}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -127,10 +133,10 @@
       <Filter>Test Files\test_management\headers</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
-      <Filter>Source Files\model\camera\headers</Filter>
+      <Filter>Source Files\scene\camera\headers</Filter>
     </ClInclude>
     <ClInclude Include="CameraView.h">
-      <Filter>Source Files\model\camera\headers</Filter>
+      <Filter>Source Files\scene\camera\headers</Filter>
     </ClInclude>
     <ClInclude Include="FileSystem.h">
       <Filter>Source Files\file_system\headers</Filter>
@@ -151,13 +157,13 @@
       <Filter>Source Files\ray_tracer\headers</Filter>
     </ClInclude>
     <ClInclude Include="Triangle.h">
-      <Filter>Source Files\model\shape\headers</Filter>
+      <Filter>Source Files\scene\shape\headers</Filter>
     </ClInclude>
     <ClInclude Include="Sphere.h">
-      <Filter>Source Files\model\shape\headers</Filter>
+      <Filter>Source Files\scene\shape\headers</Filter>
     </ClInclude>
     <ClInclude Include="Shape.h">
-      <Filter>Source Files\model\shape\headers</Filter>
+      <Filter>Source Files\scene\shape\headers</Filter>
     </ClInclude>
     <ClInclude Include="RayUtil.h">
       <Filter>Source Files\util\headers</Filter>
@@ -185,6 +191,12 @@
     </ClInclude>
     <ClInclude Include="ShapeTest.h">
       <Filter>Test Files\tests\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystemTest.h">
+      <Filter>Test Files\tests\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneObject.h">
+      <Filter>Source Files\scene\headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -225,10 +237,10 @@
       <Filter>Test Files\tests</Filter>
     </ClCompile>
     <ClCompile Include="Camera.cpp">
-      <Filter>Source Files\model\camera</Filter>
+      <Filter>Source Files\scene\camera</Filter>
     </ClCompile>
     <ClCompile Include="CameraView.cpp">
-      <Filter>Source Files\model\camera</Filter>
+      <Filter>Source Files\scene\camera</Filter>
     </ClCompile>
     <ClCompile Include="Ray.cpp">
       <Filter>Source Files\ray_tracer\ray</Filter>
@@ -237,13 +249,13 @@
       <Filter>Test Files\tests</Filter>
     </ClCompile>
     <ClCompile Include="Triangle.cpp">
-      <Filter>Source Files\model\shape</Filter>
+      <Filter>Source Files\scene\shape</Filter>
     </ClCompile>
     <ClCompile Include="Sphere.cpp">
-      <Filter>Source Files\model\shape</Filter>
+      <Filter>Source Files\scene\shape</Filter>
     </ClCompile>
     <ClCompile Include="Shape.cpp">
-      <Filter>Source Files\model\shape</Filter>
+      <Filter>Source Files\scene\shape</Filter>
     </ClCompile>
     <ClCompile Include="RayUtil.cpp">
       <Filter>Source Files\util</Filter>
@@ -270,6 +282,9 @@
       <Filter>Source Files\exception</Filter>
     </ClCompile>
     <ClCompile Include="ShapeTest.cpp">
+      <Filter>Test Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystemTest.cpp">
       <Filter>Test Files\tests</Filter>
     </ClCompile>
   </ItemGroup>

@@ -13,6 +13,7 @@
 #include "MathUtilTest.h"
 #include "ShapeUtilTest.h"
 #include "ShapeTest.h"
+#include "FileSystemTest.h"
 
 using namespace std;
 

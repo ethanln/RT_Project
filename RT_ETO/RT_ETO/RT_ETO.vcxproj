@@ -93,6 +93,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -107,6 +109,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -153,6 +157,7 @@
     <ClInclude Include="Color.h" />
     <ClInclude Include="ColorTest.h" />
     <ClInclude Include="FileSystem.h" />
+    <ClInclude Include="FileSystemTest.h" />
     <ClInclude Include="ImageBufferException.h" />
     <ClInclude Include="ImageBufferTest.h" />
     <ClInclude Include="ImageBuffer.h" />
@@ -165,6 +170,7 @@
     <ClInclude Include="RayTracer.h" />
     <ClInclude Include="RayUtil.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="SceneObject.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="ShapeException.h" />
     <ClInclude Include="ShapeTest.h" />
@@ -188,6 +194,7 @@
     <ClCompile Include="ColorTest.cpp" />
     <ClCompile Include="driver.cpp" />
     <ClCompile Include="FileSystem.cpp" />
+    <ClCompile Include="FileSystemTest.cpp" />
     <ClCompile Include="ImageBuffer.cpp" />
     <ClCompile Include="ImageBufferException.cpp" />
     <ClCompile Include="ImageBufferTest.cpp" />

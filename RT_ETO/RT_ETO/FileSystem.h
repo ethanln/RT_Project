@@ -1,3 +1,4 @@
+#pragma once
 #ifndef FILE_SYSTEM_H
 #define FILE_SYSTEM_H
 
@@ -6,8 +7,9 @@
 #include <iostream>
 #include <string>
 #include "ImageBuffer.h"
+#include "Color.h"
 
-#pragma once
+using namespace std;
 
 class FileSystem
 {
@@ -42,12 +44,26 @@ class FileSystem
 
 		virtual bool _save_bmp(string filename, ImageBuffer image);
 
+		virtual ImageBuffer _load_bump_map(string filename);
+
+		virtual ImageBuffer _load_texture_map(string filename);
+
 	public:
 		
 		/**
 		* Singleton: saves image buffer as bmp file. 
 		*/
 		static bool save_bmp(string filename, ImageBuffer image);
+
+		/**
+		* Singleton: load bump map as image buffer.
+		*/
+		static ImageBuffer load_bump_map(string filename);
+
+		/**
+		* Singleton: load texture map as image buffer.
+		*/
+		static ImageBuffer load_texture_map(string filename);
 };
 
 #endif

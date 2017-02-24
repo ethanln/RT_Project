@@ -97,7 +97,27 @@ bool FileSystem::_save_bmp(string filename, ImageBuffer image)
 	return true;
 }
 
+ImageBuffer FileSystem::_load_bump_map(string filename)
+{
+	return ImageBuffer(0.0f, 0.0f);
+}
+
+ImageBuffer FileSystem::_load_texture_map(string filename) 
+{
+	return ImageBuffer(0.0f, 0.0f);
+}
+
 bool FileSystem::save_bmp(string filename, ImageBuffer image)
 {
 	return FileSystem::inst()->_save_bmp(filename, image);
+}
+
+ImageBuffer FileSystem::load_bump_map(string filename)
+{
+	return FileSystem::inst()->_load_bump_map(filename);
+}
+
+ImageBuffer FileSystem::load_texture_map(string filename)
+{
+	return FileSystem::inst()->_load_texture_map(filename);
 }

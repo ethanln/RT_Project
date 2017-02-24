@@ -1,5 +1,11 @@
-﻿  ShapeTest.cpp
-c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\shape.h(41): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\shape.h(46): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+﻿  FileSystemTest.cpp
+c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\imagebuffer.h(57): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\imagebuffer.h(62): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+  FileSystem.cpp
+c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\imagebuffer.h(57): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\imagebuffer.h(62): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\filesystem.cpp(102): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\ethan\desktop\development\raytracer\rt_eto\rt_eto\filesystem.cpp(107): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
   RT_ETO.vcxproj -> C:\Users\Ethan\Desktop\development\RayTracer\RT_ETO\Debug\RT_ETO.exe
   RT_ETO.vcxproj -> C:\Users\Ethan\Desktop\development\RayTracer\RT_ETO\Debug\RT_ETO.pdb (Full PDB)
