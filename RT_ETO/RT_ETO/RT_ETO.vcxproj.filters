@@ -198,6 +198,12 @@
     <ClInclude Include="SceneObject.h">
       <Filter>Source Files\scene\headers</Filter>
     </ClInclude>
+    <ClInclude Include="SceneObjectException.h">
+      <Filter>Source Files\exception\header</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneObjectTest.h">
+      <Filter>Test Files\tests\headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -285,6 +291,15 @@
       <Filter>Test Files\tests</Filter>
     </ClCompile>
     <ClCompile Include="FileSystemTest.cpp">
+      <Filter>Test Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneObject.cpp">
+      <Filter>Source Files\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneObjectException.cpp">
+      <Filter>Source Files\exception</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneObjectTest.cpp">
       <Filter>Test Files\tests</Filter>
     </ClCompile>
   </ItemGroup>

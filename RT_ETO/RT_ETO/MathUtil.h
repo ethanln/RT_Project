@@ -7,7 +7,6 @@
 #include <cstdlib>
 #include <ctime>
 #include "Vec3Util.h"
-#include "IShape.h"
 #include "Triangle.h"
 #include "Sphere.h"
 

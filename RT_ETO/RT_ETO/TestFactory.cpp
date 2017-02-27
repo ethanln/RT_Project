@@ -61,6 +61,10 @@ Test* TestFactory::_make_test(string key)
 	{
 		return new FileSystemTest();
 	}
+	else if (key == "SceneObjectTest")
+	{
+		return new SceneObjectTest();
+	}
 	return nullptr;
 }
 

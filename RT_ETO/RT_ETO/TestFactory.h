@@ -14,6 +14,7 @@
 #include "ShapeUtilTest.h"
 #include "ShapeTest.h"
 #include "FileSystemTest.h"
+#include "SceneObjectTest.h"
 
 using namespace std;
 

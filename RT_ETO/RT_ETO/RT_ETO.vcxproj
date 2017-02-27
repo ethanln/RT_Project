@@ -171,6 +171,8 @@
     <ClInclude Include="RayUtil.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="SceneObject.h" />
+    <ClInclude Include="SceneObjectException.h" />
+    <ClInclude Include="SceneObjectTest.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="ShapeException.h" />
     <ClInclude Include="ShapeTest.h" />
@@ -203,6 +205,9 @@
     <ClCompile Include="RayUtilTest.cpp" />
     <ClCompile Include="Ray.cpp" />
     <ClCompile Include="RayUtil.cpp" />
+    <ClCompile Include="SceneObject.cpp" />
+    <ClCompile Include="SceneObjectException.cpp" />
+    <ClCompile Include="SceneObjectTest.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="ShapeException.cpp" />
     <ClCompile Include="ShapeTest.cpp" />

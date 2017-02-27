@@ -8,7 +8,7 @@
 
 using namespace std;
 
-class Sphere : Shape
+class Sphere : public Shape
 {
 	public:
 
