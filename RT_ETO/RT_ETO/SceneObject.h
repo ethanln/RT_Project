@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SCENE_H
-#define SCENE_H
+#ifndef SCENE_OBJECT_H
+#define SCENE_OBJECT_H
 
 #include <vector>
 #include "Shape.h"

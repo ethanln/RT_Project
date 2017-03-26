@@ -163,6 +163,7 @@
     <ClInclude Include="ImageBuffer.h" />
     <ClInclude Include="IRayTracer.h" />
     <ClInclude Include="ITest.h" />
+    <ClInclude Include="LightSource.h" />
     <ClInclude Include="MathUtil.h" />
     <ClInclude Include="MathUtilTest.h" />
     <ClInclude Include="RayUtilTest.h" />
@@ -170,6 +171,8 @@
     <ClInclude Include="RayTracer.h" />
     <ClInclude Include="RayUtil.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneException.h" />
     <ClInclude Include="SceneObject.h" />
     <ClInclude Include="SceneObjectException.h" />
     <ClInclude Include="SceneObjectTest.h" />
@@ -200,11 +203,14 @@
     <ClCompile Include="ImageBuffer.cpp" />
     <ClCompile Include="ImageBufferException.cpp" />
     <ClCompile Include="ImageBufferTest.cpp" />
+    <ClCompile Include="LightSource.cpp" />
     <ClCompile Include="MathUtil.cpp" />
     <ClCompile Include="MathUtilTest.cpp" />
     <ClCompile Include="RayUtilTest.cpp" />
     <ClCompile Include="Ray.cpp" />
     <ClCompile Include="RayUtil.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SceneException.cpp" />
     <ClCompile Include="SceneObject.cpp" />
     <ClCompile Include="SceneObjectException.cpp" />
     <ClCompile Include="SceneObjectTest.cpp" />

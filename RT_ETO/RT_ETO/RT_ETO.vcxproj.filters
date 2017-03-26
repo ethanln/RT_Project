@@ -91,6 +91,18 @@
     <Filter Include="Source Files\scene\controller">
       <UniqueIdentifier>{a540cec4-155a-4988-9591-2057abbd8d00}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\scene\light_source">
+      <UniqueIdentifier>{18523668-00b2-4149-b0f7-3b770ffa7b6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\scene_object">
+      <UniqueIdentifier>{df2e5071-381b-40f0-8468-a492647dded2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\scene_object\headers">
+      <UniqueIdentifier>{ed063962-3765-4392-84d5-11f16ffc3c44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\light_source\headers">
+      <UniqueIdentifier>{243a1b0a-e2c8-4884-ad29-bf8bf1f414df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -195,14 +207,23 @@
     <ClInclude Include="FileSystemTest.h">
       <Filter>Test Files\tests\headers</Filter>
     </ClInclude>
-    <ClInclude Include="SceneObject.h">
-      <Filter>Source Files\scene\headers</Filter>
-    </ClInclude>
     <ClInclude Include="SceneObjectException.h">
       <Filter>Source Files\exception\header</Filter>
     </ClInclude>
     <ClInclude Include="SceneObjectTest.h">
       <Filter>Test Files\tests\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="LightSource.h">
+      <Filter>Source Files\scene\light_source\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneObject.h">
+      <Filter>Source Files\scene\scene_object\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Source Files\scene\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneException.h">
+      <Filter>Source Files\exception\header</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -293,14 +314,23 @@
     <ClCompile Include="FileSystemTest.cpp">
       <Filter>Test Files\tests</Filter>
     </ClCompile>
-    <ClCompile Include="SceneObject.cpp">
-      <Filter>Source Files\scene</Filter>
-    </ClCompile>
     <ClCompile Include="SceneObjectException.cpp">
       <Filter>Source Files\exception</Filter>
     </ClCompile>
     <ClCompile Include="SceneObjectTest.cpp">
       <Filter>Test Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="LightSource.cpp">
+      <Filter>Source Files\scene\light_source</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneObject.cpp">
+      <Filter>Source Files\scene\scene_object</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Source Files\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneException.cpp">
+      <Filter>Source Files\exception</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
