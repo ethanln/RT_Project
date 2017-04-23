@@ -1,9 +1,10 @@
 #include "stdafx.h"
 #include "Ray.h"
 
-Ray::Ray(glm::vec3 _ray)
+Ray::Ray(glm::vec3 _direction, glm::vec3 _initial_position)
 {
-	this->ray = _ray;
+	this->direction = _direction;
+	this->initial_position = _initial_position;
 }
 
 Ray::~Ray()

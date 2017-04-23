@@ -7,6 +7,7 @@
 #include <exception>
 
 #include "LightSource.h"
+#include "CameraView.h"
 #include "Shape.h"
 #include "SceneObject.h"
 #include "SceneException.h"
@@ -26,6 +27,11 @@ class Scene {
 		*/
 		LightSource* light_source;
 
+		/**
+		* Light source of scene.
+		*/
+		CameraView* camera_view;
+
 	public:
 
 		/**
@@ -36,7 +42,7 @@ class Scene {
 		/**
 		* Contructor.
 		*/
-		Scene(LightSource* _light_source);
+		Scene(LightSource* _light_source, CameraView* _camera);
 
 		/**
 		* Decontructor.
@@ -52,6 +58,11 @@ class Scene {
 		* Fetches a scene object from the scene.
 		*/
 		virtual SceneObject* get_scene_object(string name) throw(SceneException);
+
+		/**
+		* Fetches camera instance.
+		*/
+		virtual CameraView* get_camera_view();
 
 		/**
 		* Returns first iteration in memory of scene objects.

@@ -20,3 +20,15 @@ glm::vec3 ShapeUtil::GET_SPHERE_NORMAL(glm::vec3 intersection, Sphere s, bool is
 	glm::vec3 vec = is_normalized ? Vec3Util::NORMALIZE(intersection - s.center) : intersection - s.center;
 	return vec;
 }
+
+IntersectionResult ShapeUtil::TEST_TRIANGLE_INTERSECTION(Ray ray, Triangle t)
+{
+	throw "Not Yet Implemented";
+	// IMPLEMENT
+}
+
+IntersectionResult ShapeUtil::TEST_SPHERE_INTERSECTION(Ray ray, Sphere s)
+{
+	throw "Not Yet Implemented";
+	// IMPLEMENT
+}

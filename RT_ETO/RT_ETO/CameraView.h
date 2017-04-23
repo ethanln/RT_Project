@@ -4,14 +4,18 @@
 #define CAMERA_VIEW_H
 
 #include <glm/mat4x4.hpp>
+#include <stdexcept> 
 #include <vector>
 #include <math.h>
+#include <sstream>
 #include <fstream>
 #include <iostream>
 #include <string>
 #include "Camera.h"
 #include "Vec3Util.h"
 #include "RayUtil.h"
+#include "Ray.h"
+#include "CameraViewException.h"
 
 using namespace std;
 
@@ -78,7 +82,7 @@ class CameraView
 		/**
 		* Cast initial ray from cam postion to view plane, jittering is an option.
 		*/
-		virtual glm::vec3 get_initial_ray(int _x, int _y, bool is_normalized, bool is_jitter);
+		virtual Ray get_initial_ray(int _x, int _y, bool is_normalized, bool is_jitter) throw(CameraViewException);
 
 		/**
 		* Set cam position.
@@ -99,6 +103,16 @@ class CameraView
 		* Get camera orientation.
 		*/
 		virtual glm::vec3 get_cam_orientation();
+
+		/**
+		* Get frustrum look from.
+		*/
+		virtual glm::vec3 get_look_from();
+
+		/**
+		* Get frustrum look at.
+		*/
+		virtual glm::vec3 get_look_at();
 		
 		/**
 		* Get dimension x.
@@ -109,6 +123,11 @@ class CameraView
 		* Get dimension y.
 		*/
 		virtual int get_dim_y();
+
+		/**
+		* Get fov.
+		*/
+		virtual float get_fov();
 
 		/**
 		* Get coordinate at pixel location (x,y).

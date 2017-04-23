@@ -88,9 +88,6 @@
     <Filter Include="Source Files\scene\headers">
       <UniqueIdentifier>{77291dfd-0356-4d99-9278-4a2effaa6ee3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\scene\controller">
-      <UniqueIdentifier>{a540cec4-155a-4988-9591-2057abbd8d00}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\scene\light_source">
       <UniqueIdentifier>{18523668-00b2-4149-b0f7-3b770ffa7b6c}</UniqueIdentifier>
     </Filter>
@@ -102,6 +99,24 @@
     </Filter>
     <Filter Include="Source Files\scene\light_source\headers">
       <UniqueIdentifier>{243a1b0a-e2c8-4884-ad29-bf8bf1f414df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\facade">
+      <UniqueIdentifier>{a540cec4-155a-4988-9591-2057abbd8d00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\facade\headers">
+      <UniqueIdentifier>{a7a47806-3a4b-4596-bd86-48fc7d9f7512}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\connection_package">
+      <UniqueIdentifier>{dcf1a934-cf99-4e4e-a541-a87638734386}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\connection_package\headers">
+      <UniqueIdentifier>{31d53f05-388d-459e-8d7b-befc89ce4f92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\intersection_result">
+      <UniqueIdentifier>{56467e00-8006-40bf-b9af-a7ed5871ba9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\intersection_result\headers">
+      <UniqueIdentifier>{e2d51ef3-fa9e-44d8-adb4-c6ab60fa0a03}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -225,6 +240,24 @@
     <ClInclude Include="SceneException.h">
       <Filter>Source Files\exception\header</Filter>
     </ClInclude>
+    <ClInclude Include="SceneFacade.h">
+      <Filter>Source Files\scene\facade\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="connection.h">
+      <Filter>Source Files\connection_package\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ConnectionException.h">
+      <Filter>Source Files\exception\header</Filter>
+    </ClInclude>
+    <ClInclude Include="IntersectionResult.h">
+      <Filter>Source Files\scene\intersection_result\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneFacadeException.h">
+      <Filter>Source Files\exception\header</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraViewException.h">
+      <Filter>Source Files\exception\header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -330,6 +363,24 @@
       <Filter>Source Files\scene</Filter>
     </ClCompile>
     <ClCompile Include="SceneException.cpp">
+      <Filter>Source Files\exception</Filter>
+    </ClCompile>
+    <ClCompile Include="connection.cpp">
+      <Filter>Source Files\connection_package</Filter>
+    </ClCompile>
+    <ClCompile Include="ConnectionException.cpp">
+      <Filter>Source Files\exception</Filter>
+    </ClCompile>
+    <ClCompile Include="IntersectionResult.cpp">
+      <Filter>Source Files\scene\intersection_result</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneFacade.cpp">
+      <Filter>Source Files\scene\facade</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneFacadeException.cpp">
+      <Filter>Source Files\exception</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraViewException.cpp">
       <Filter>Source Files\exception</Filter>
     </ClCompile>
   </ItemGroup>

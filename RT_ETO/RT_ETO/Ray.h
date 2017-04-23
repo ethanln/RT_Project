@@ -10,10 +10,12 @@ using namespace std;
 class Ray
 {
 	public:
-		glm::vec3 ray;
+		glm::vec3 direction;
+
+		glm::vec3 initial_position;
 
 	public:
-		Ray(glm::vec3 _ray);
+		Ray(glm::vec3 _direction, glm::vec3 _initial_position);
 
 		~Ray();
 };

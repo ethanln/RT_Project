@@ -153,14 +153,18 @@
   <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CameraView.h" />
+    <ClInclude Include="CameraViewException.h" />
     <ClInclude Include="CameraViewTest.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="ColorTest.h" />
+    <ClInclude Include="connection.h" />
+    <ClInclude Include="ConnectionException.h" />
     <ClInclude Include="FileSystem.h" />
     <ClInclude Include="FileSystemTest.h" />
     <ClInclude Include="ImageBufferException.h" />
     <ClInclude Include="ImageBufferTest.h" />
     <ClInclude Include="ImageBuffer.h" />
+    <ClInclude Include="IntersectionResult.h" />
     <ClInclude Include="IRayTracer.h" />
     <ClInclude Include="ITest.h" />
     <ClInclude Include="LightSource.h" />
@@ -173,6 +177,8 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneException.h" />
+    <ClInclude Include="SceneFacade.h" />
+    <ClInclude Include="SceneFacadeException.h" />
     <ClInclude Include="SceneObject.h" />
     <ClInclude Include="SceneObjectException.h" />
     <ClInclude Include="SceneObjectTest.h" />
@@ -194,15 +200,19 @@
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CameraView.cpp" />
+    <ClCompile Include="CameraViewException.cpp" />
     <ClCompile Include="CameraViewTest.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="ColorTest.cpp" />
+    <ClCompile Include="connection.cpp" />
+    <ClCompile Include="ConnectionException.cpp" />
     <ClCompile Include="driver.cpp" />
     <ClCompile Include="FileSystem.cpp" />
     <ClCompile Include="FileSystemTest.cpp" />
     <ClCompile Include="ImageBuffer.cpp" />
     <ClCompile Include="ImageBufferException.cpp" />
     <ClCompile Include="ImageBufferTest.cpp" />
+    <ClCompile Include="IntersectionResult.cpp" />
     <ClCompile Include="LightSource.cpp" />
     <ClCompile Include="MathUtil.cpp" />
     <ClCompile Include="MathUtilTest.cpp" />
@@ -211,6 +221,8 @@
     <ClCompile Include="RayUtil.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneException.cpp" />
+    <ClCompile Include="SceneFacade.cpp" />
+    <ClCompile Include="SceneFacadeException.cpp" />
     <ClCompile Include="SceneObject.cpp" />
     <ClCompile Include="SceneObjectException.cpp" />
     <ClCompile Include="SceneObjectTest.cpp" />

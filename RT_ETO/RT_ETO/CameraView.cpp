@@ -18,14 +18,23 @@ CameraView::~CameraView()
 	delete this->cam;
 }
 
-glm::vec3 CameraView::get_initial_ray(int _x, int _y, bool is_normalized, bool is_jitter)
+Ray CameraView::get_initial_ray(int _x, int _y, bool is_normalized, bool is_jitter)
 {
-	glm::vec3 p1 = this->look_from;
-	glm::vec3 p2 = this->view_plane.at(_y).at(_x);
-	glm::vec3 ray = is_jitter ? RayUtil::CAST_RAY_JITTER(p1, p2, this->pixel_radius_x, this->pixel_radius_y, is_normalized) : RayUtil::CAST_RAY(p1, p2, is_normalized);
+	try
+	{
+		glm::vec3 p1 = this->look_from;
+		glm::vec3 p2 = this->view_plane.at(_y).at(_x);
+		glm::vec3 direction = is_jitter ? RayUtil::CAST_RAY_JITTER(p1, p2, this->pixel_radius_x, this->pixel_radius_y, is_normalized) : RayUtil::CAST_RAY(p1, p2, is_normalized);
 
-	// WILL NEED TO DEFINE MORE PARAMETERS IN RAY INSTANCE AFTER DESIGNING THE CLASS MEMEBERS FOR RAY.
-	return ray;
+		return Ray(direction, p1);
+	}
+	catch (const std::out_of_range& oor)
+	{
+		// Throw Scene Exception the coordinates are out of range.
+		stringstream ss;
+		ss << "(" << _x << "," << _y << ") out of range.";
+		throw new CameraViewException(ss.str());
+	}
 }
 
 void CameraView::set_cam_pos(glm::vec3 _new_pos)
@@ -48,6 +57,16 @@ glm::vec3 CameraView::get_cam_orientation()
 	return this->cam->orientation;
 }
 
+glm::vec3 CameraView::get_look_from()
+{
+	return this->look_from;
+}
+
+glm::vec3 CameraView::get_look_at()
+{
+	return this->look_at;
+}
+
 int CameraView::get_dim_x()
 {
 	return this->dim_x;
@@ -56,6 +75,11 @@ int CameraView::get_dim_x()
 int CameraView::get_dim_y()
 {
 	return this->dim_y;
+}
+
+float CameraView::get_fov()
+{
+	return this->fov;
 }
 
 glm::vec3 CameraView::get_pixel_coor(int _x, int _y)

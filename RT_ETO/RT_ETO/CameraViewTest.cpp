@@ -24,17 +24,17 @@ bool CameraViewTest::do_test()
 
 	view.print_viewplane("../../output/view_test.csv");
 
-	glm::vec3 ray = view.get_initial_ray(0, 0, false, false);
+	Ray ray = view.get_initial_ray(0, 0, false, false);
 
-	ASSERT_EQUALS("Test cast ray without normalization x-coor.", -10.8239222f, ray.x);
-	ASSERT_EQUALS("Test cast ray without normalization y-coor.", 10.8239222f, ray.y);
-	ASSERT_EQUALS("Test cast ray without normalization z-coor.", -10.0000000f, ray.z);
+	ASSERT_EQUALS("Test cast ray without normalization x-coor.", -10.8239222f, ray.direction.x);
+	ASSERT_EQUALS("Test cast ray without normalization y-coor.", 10.8239222f, ray.direction.y);
+	ASSERT_EQUALS("Test cast ray without normalization z-coor.", -10.0000000f, ray.direction.z);
 
 	ray = view.get_initial_ray(0, 0, true, false);
 
-	ASSERT_EQUALS("Test cast ray with normalization x-coor.", -0.591979980f, ray.x);
-	ASSERT_EQUALS("Test cast ray with normalization y-coor.", 0.591979980f, ray.y);
-	ASSERT_EQUALS("Test cast ray with normalization z-coor.", -0.546918154f, ray.z);
+	ASSERT_EQUALS("Test cast ray with normalization x-coor.", -0.591979980f, ray.direction.x);
+	ASSERT_EQUALS("Test cast ray with normalization y-coor.", 0.591979980f, ray.direction.y);
+	ASSERT_EQUALS("Test cast ray with normalization z-coor.", -0.546918154f, ray.direction.z);
 	
 	ASSERT_EQUALS("Test view plane pixel x-coordinate.", -10.8239222f, view.get_pixel_coor(0, 0).x);
 	ASSERT_EQUALS("Test view plane pixel y-coordinate.", 10.8239222f, view.get_pixel_coor(0, 0).y);
