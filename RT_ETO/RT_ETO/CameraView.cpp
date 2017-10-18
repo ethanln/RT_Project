@@ -1,9 +1,9 @@
 #include "stdafx.h"
 #include "CameraView.h"
 
-CameraView::CameraView(glm::vec3 _pos, glm::vec3 _orientation, glm::vec3 _look_from, glm::vec3 _look_at, int _dim_x, int _dim_y, float _fov)
+CameraView::CameraView(Camera* _camera, glm::vec3 _look_from, glm::vec3 _look_at, int _dim_x, int _dim_y, float _fov)
 {
-	this->cam = new Camera(_pos, _orientation);
+	this->camera = _camera;
 	this->look_from = _look_from;
 	this->look_at = _look_at;
 	this->dim_x = _dim_x;
@@ -15,7 +15,7 @@ CameraView::CameraView(glm::vec3 _pos, glm::vec3 _orientation, glm::vec3 _look_f
 
 CameraView::~CameraView()
 {
-	delete this->cam;
+	delete this->camera;
 }
 
 Ray CameraView::get_initial_ray(int _x, int _y, bool is_normalized, bool is_jitter)
@@ -39,22 +39,22 @@ Ray CameraView::get_initial_ray(int _x, int _y, bool is_normalized, bool is_jitt
 
 void CameraView::set_cam_pos(glm::vec3 _new_pos)
 {
-	this->cam->position = _new_pos;
+	this->camera->position = _new_pos;
 }
 
 void CameraView::set_cam_orientation(glm::vec3 _new_orientation)
 {
-	this->cam->orientation = _new_orientation;
+	this->camera->orientation = _new_orientation;
 }
 
 glm::vec3 CameraView::get_cam_pos()
 {
-	return this->cam->position;
+	return this->camera->position;
 }
 
 glm::vec3 CameraView::get_cam_orientation()
 {
-	return this->cam->orientation;
+	return this->camera->orientation;
 }
 
 glm::vec3 CameraView::get_look_from()
@@ -85,6 +85,21 @@ float CameraView::get_fov()
 glm::vec3 CameraView::get_pixel_coor(int _x, int _y)
 {
 	return this->view_plane.at(_y).at(_x);
+}
+
+CameraView CameraView::clone()
+{
+	try
+	{
+		Camera clone_camera = this->camera->clone();
+		glm::vec3 clone_look_from = glm::vec3(this->look_from.x, this->look_from.y, this->look_from.z);
+		glm::vec3 clone_look_at = glm::vec3(this->look_at.x, this->look_at.y, this->look_at.z);
+		return CameraView(&clone_camera, clone_look_from, clone_look_at, this->dim_x, this->dim_y, this->fov);
+	}
+	catch (exception& e)
+	{
+		throw new CameraViewException("Could not clone CameraView instance.");
+	}
 }
 
 void CameraView::print_viewplane(string filename)

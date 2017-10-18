@@ -22,6 +22,19 @@ bool SceneObjectTest::do_test()
 
 	SceneObject obj;
 
+	obj.add_material("stuff", "0.0f");
+
+	this->ASSERT_EQUALS("Test add material object.", obj.get_material("stuff"), "0.0f");
+
+	try
+	{
+		obj.get_material("ERROR");
+	}
+	catch (SceneObjectException& e)
+	{
+		this->ASSERT_EQUALS("Test improper material query.", e.what(), "Could not fetch object material.");
+	}
+
 	try 
 	{
 		obj.get_bump_map_pixel(0, 0);
@@ -81,5 +94,22 @@ bool SceneObjectTest::do_test()
 		ASSERT_EQUALS("Test iteration process of object with Sphere params center y", 1.0f, sphere->center.y);
 		ASSERT_EQUALS("Test iteration process of object with Sphere params center z", 2.0f, sphere->center.z);
 	}
+
+	SceneObject clone_obj = obj.clone();
+	this->ASSERT_EQUALS("Test clone object material equal to object material", obj.get_material("stuff"), clone_obj.get_material("stuff"));
+
+	clone_obj.add_material("stuff_1", "1.0f");
+	this->ASSERT_FALSE("Test object to see if it does not contain the new clone material.", obj.has_material("stuff_1"));
+	this->ASSERT_TRUE("Test clone object to see if it does contain the new clone material.", clone_obj.has_material("stuff_1"));
+
+	for (auto s : clone_obj)
+	{
+		Sphere* sphere = static_cast<Sphere*>(s);
+		ASSERT_EQUALS("Test iteration process of clone object with Sphere params radius", 2.0f, sphere->radius);
+		ASSERT_EQUALS("Test iteration process of clone object with Sphere params center x", 0.0f, sphere->center.x);
+		ASSERT_EQUALS("Test iteration process of clone object with Sphere params center y", 1.0f, sphere->center.y);
+		ASSERT_EQUALS("Test iteration process of clone object with Sphere params center z", 2.0f, sphere->center.z);
+	}
+
 	return is_pass;
 }

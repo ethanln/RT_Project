@@ -57,6 +57,15 @@ bool ImageBufferTest::do_test()
 		this->ASSERT_EQUALS("Test out of index error upper bound", "Pixel index (700, 700) out of range.", e.what());
 	}
 
+	ImageBuffer clone_buffer = buffer.clone();
+	this->ASSERT_EQUALS("Test clone buffer update pixel r equal to buffer pixel r.", buffer.get_pixel(349, 349)->r, clone_buffer.get_pixel(349, 349)->r);
+	this->ASSERT_EQUALS("Test clone buffer update pixel g equal to buffer pixel g.", buffer.get_pixel(349, 349)->g, clone_buffer.get_pixel(349, 349)->g);
+	this->ASSERT_EQUALS("Test clone buffer update pixel b equal to buffer pixel b.", buffer.get_pixel(349, 349)->b, clone_buffer.get_pixel(349, 349)->b);
+	buffer.update_pixel(Color(0.4f, 0.3f, 0.1f), 349, 349);
+	this->ASSERT_NOT_EQUAL("Test clone buffer update pixel r not equal to buffer pixel r.", buffer.get_pixel(349, 349)->r, clone_buffer.get_pixel(349, 349)->r);
+	this->ASSERT_NOT_EQUAL("Test clone buffer update pixel g not equal to buffer pixel g.", buffer.get_pixel(349, 349)->g, clone_buffer.get_pixel(349, 349)->g);
+	this->ASSERT_NOT_EQUAL("Test clone buffer update pixel b not equal to buffer pixel b.", buffer.get_pixel(349, 349)->b, clone_buffer.get_pixel(349, 349)->b);
+
 	FileSystem::save_bmp("../../output/stuff", buffer);
 
 	return is_pass;

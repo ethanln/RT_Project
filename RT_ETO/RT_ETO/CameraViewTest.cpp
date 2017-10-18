@@ -20,7 +20,7 @@ bool CameraViewTest::do_test()
 {
 	bool is_pass = true;
 
-	CameraView view = CameraView(glm::vec3(1.0f, 1.0f, 0.0f), glm::vec3(20.0f, 20.0f, 20.0f), glm::vec3(0.0f, 0.0f, 10.0f), glm::vec3(0.0f, 0.0f, 0.0f), 500, 500, 45.0f);
+	CameraView view = CameraView(new Camera(glm::vec3(1.0f, 1.0f, 0.0f), glm::vec3(20.0f, 20.0f, 20.0f)), glm::vec3(0.0f, 0.0f, 10.0f), glm::vec3(0.0f, 0.0f, 0.0f), 500, 500, 45.0f);
 
 	view.print_viewplane("../../output/view_test.csv");
 

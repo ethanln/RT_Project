@@ -28,6 +28,11 @@ class SceneObject {
 		*/
 		ImageBuffer* texture_map;
 
+		/**
+		* Materials of object.
+		*/
+		map<string, string> materials;
+
 	public:
 
 		/**
@@ -71,6 +76,21 @@ class SceneObject {
 		virtual void add_shape(Shape* shape);
 
 		/**
+		* Add material to shape.
+		*/
+		virtual void add_material(string key, string value) throw(SceneObjectException);
+
+		/**
+		* Get material from shape.
+		*/
+		virtual string get_material(string key) throw(SceneObjectException);
+
+		/**
+		* Check if material exists.
+		*/
+		virtual bool has_material(string key) throw(SceneObjectException);
+
+		/**
 		* Returns first iteration in memory of shape list.
 		*/
 		virtual std::vector<Shape*>::iterator begin();
@@ -89,6 +109,11 @@ class SceneObject {
 		* Returns last iteration in memory of shape list as const.
 		*/
 		virtual std::vector<Shape*>::const_iterator end() const;
+
+		/**
+		* Clone scene object instance.
+		*/
+		virtual SceneObject clone() throw(SceneObjectException);
 };
 
 #endif

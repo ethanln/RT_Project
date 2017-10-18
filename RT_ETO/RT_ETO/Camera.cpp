@@ -17,3 +17,10 @@ Camera::~Camera()
 {
 
 }
+
+Camera Camera::clone()
+{
+	glm::vec3 clone_position = glm::vec3(this->position.x, this->position.y, this->position.z);
+	glm::vec3 clone_orientation = glm::vec3(this->orientation.x, this->orientation.y, this->orientation.z);
+	return Camera(clone_position, clone_orientation);
+}

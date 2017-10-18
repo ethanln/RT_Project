@@ -25,7 +25,7 @@ class CameraView
 		/**
 		* Camera instance.
 		*/
-		Camera* cam;
+		Camera* camera;
 
 		/**
 		* Camera view plane.
@@ -72,7 +72,7 @@ class CameraView
 		/**
 		* CameraView constructor.
 		*/
-		CameraView(glm::vec3 _pos, glm::vec3 _orientation, glm::vec3 _look_from, glm::vec3 _look_at, int _dim_x, int _dim_y, float _fov);
+		CameraView(Camera* _camera, glm::vec3 _look_from, glm::vec3 _look_at, int _dim_x, int _dim_y, float _fov);
 
 		/**
 		* CameraView deconstructor.
@@ -135,7 +135,12 @@ class CameraView
 		virtual glm::vec3 get_pixel_coor(int _x, int _y);
 
 		/**
-		* Print view plane table;
+		* Clone camera view instance.
+		*/
+		virtual CameraView clone() throw(CameraViewException);
+
+		/**
+		* Print view plane table.
 		*/
 		virtual void print_viewplane(string filename);
 

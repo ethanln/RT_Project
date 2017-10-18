@@ -33,6 +33,11 @@ class Sphere : public Shape
 		* Triangle deconstructor.
 		*/
 		~Sphere();
+
+		/**
+		* Clone sphere instance.
+		*/
+		virtual Shape* clone() throw(ShapeException);
 };
 
 #endif

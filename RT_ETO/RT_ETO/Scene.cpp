@@ -3,13 +3,11 @@
 
 Scene::Scene() 
 {
-	this->light_source = new LightSource(glm::vec3(0.0f, 0.0f, 0.0f));
-	this->camera_view = new CameraView(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 3.0f), glm::vec3(0.0f, 0.0f, 0.0f), 500, 500, 22.5);
+	this->camera_view = new CameraView(new Camera(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f)), glm::vec3(0.0f, 0.0f, 3.0f), glm::vec3(0.0f, 0.0f, 0.0f), 500, 500, 22.5);
 }
 
-Scene::Scene(LightSource* _light_source, CameraView* _camera)
+Scene::Scene(CameraView* _camera)
 {
-	this->light_source = _light_source;
 	this->camera_view = _camera;
 }
 
@@ -20,8 +18,15 @@ Scene::~Scene()
 	{
 		delete iter->second;
 	}
+	
+	// Delete all light sources.
+	for (vector<LightSource*>::iterator iter = this->light_sources.begin(); iter != this->light_sources.end(); ++iter) 
+	{
+		delete *iter;
+	}
+
 	// Delete light source.
-	delete this->light_source;
+	delete this->camera_view;
 }
 
 void Scene::add_scene_object(string name, SceneObject* _object)
@@ -33,7 +38,7 @@ void Scene::add_scene_object(string name, SceneObject* _object)
 	}
 	catch (exception& e)
 	{
-		// Throw Scene Exception if scene object does not exist.
+		// Throw Scene Exception if scene object could not be added.
 		stringstream ss;
 		ss << "Could not add " << name << " scene.";
 		throw SceneException(ss.str());
@@ -43,17 +48,73 @@ void Scene::add_scene_object(string name, SceneObject* _object)
 SceneObject* Scene::get_scene_object(string name)
 {
 	// TEST
+	// Check to see if the key value exists in the map.
+	if (this->objects.count(name) == 0) 
+	{
+		stringstream ss;
+		ss << "Scene object " << name << " does not exist.";
+		throw SceneException(ss.str());
+	}
+
 	try
 	{
 		return this->objects[name];
 	}
 	catch (exception& e)
 	{
-		// Throw Scene Exception if scene object does not exist.
+		// Throw Scene Exception if scene object could not be fetched..
 		stringstream ss;
-		ss << "Scene object " << name << " does not exist.";
+		ss << "Scene object " << name << " could not be fetched.";
 		throw SceneException(ss.str());
 	}
+}
+
+void Scene::add_light_source(LightSource* _light_source) 
+{
+	// TEST
+	try 
+	{
+		this->light_sources.push_back(_light_source);
+	}
+	catch (exception& e) 
+	{
+		// Throw Scene Exception if light source could not be added.
+		stringstream ss;
+		ss << "Light source could not be added.";
+		throw SceneException(ss.str());
+	}
+}
+
+LightSource* Scene::get_light_source(int index)
+{
+	if (this->light_sources.size() >= index) 
+	{
+		// Throw Scene Exception if light source does not exist.
+		stringstream ss;
+		ss << "Light source does not exist at index " << index;
+		throw SceneException(ss.str());
+	}
+
+	try 
+	{
+		return this->light_sources.at(index);
+	}
+	catch (exception& e)
+	{
+		stringstream ss;
+		ss << "Light source could not be fetched.";
+		throw SceneException(ss.str());
+	}
+}
+
+int Scene::get_light_source_count() 
+{
+	return this->light_sources.size();
+}
+
+void Scene::set_camera_view(CameraView* _camera_view)
+{
+	this->camera_view = _camera_view;
 }
 
 CameraView* Scene::get_camera_view()
@@ -108,7 +169,8 @@ std::vector<SceneObject*>::const_iterator Scene::end() const
 Scene Scene::clone()
 {	
 	// TEST
-	LightSource* cloned_light_source = new LightSource(this->light_source->get_position(), this->light_source->get_color());
+	Scene scene;
+	/*LightSource* cloned_light_source = new LightSource(this->light_source->get_position(), this->light_source->get_color());
 	CameraView* cloned_camera_view = new CameraView(this->camera_view->get_cam_pos(), 
 													this->camera_view->get_cam_orientation(), 
 													this->camera_view->get_look_from(), 
@@ -121,7 +183,7 @@ Scene Scene::clone()
 	for (map<string, SceneObject*>::iterator iter = this->objects.begin(); iter != this->objects.end(); ++iter)
 	{
 		scene.add_scene_object(iter->first, iter->second);
-	}
+	}*/
 
 	return scene;
 }

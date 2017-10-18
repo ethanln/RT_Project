@@ -9,25 +9,34 @@ SceneObject::SceneObject()
 
 SceneObject::~SceneObject()
 {
-	delete this->bump_map;
-	delete this->texture_map;
-
+	// Delete the texture map image buffer.
+	if (this->bump_map != nullptr)
+	{
+		delete this->bump_map;
+	}
+	
+	// Delete the texture map image buffer.
+	if (this->texture_map != nullptr)
+	{
+		delete this->texture_map;
+	}
+	
 	// Delete all shape pointers.
-	for (auto it = shapes.begin(); it != shapes.end(); ++it) {
-		delete *it;
+	for (unsigned int i = 0; i < this->shapes.size(); i++)
+	{
+		Shape* color = this->shapes.at(i);
+		delete color;
 	}
 	shapes.clear();
 }
 
 void SceneObject::load_bump_map(ImageBuffer* _bump_map)
 {
-	// TEST
 	this->bump_map = _bump_map;
 }
 
 void SceneObject::load_texture_map(ImageBuffer* _texture_map)
 {
-	// TEST
 	this->texture_map = _texture_map;
 }
 
@@ -89,6 +98,35 @@ void SceneObject::add_shape(Shape* shape)
 	this->shapes.push_back(shape);
 }
 
+void SceneObject::add_material(string key, string value)
+{
+	try
+	{
+		this->materials.insert(std::pair<string, string>(key, value));
+	}
+	catch (exception& e)
+	{
+		throw SceneObjectException("Could not insert material into object.");
+	}
+}
+
+string SceneObject::get_material(string key)
+{
+	try
+	{
+		return this->materials[key];
+	}
+	catch (exception& e)
+	{
+		throw SceneObjectException("Could not fetch shape object.");
+	}
+}
+
+bool SceneObject::has_material(string key)
+{
+	return this->materials.count(key) > 0;
+}
+
 std::vector<Shape*>::iterator SceneObject::begin()
 {
 	return this->shapes.begin();
@@ -107,5 +145,46 @@ std::vector<Shape*>::iterator SceneObject::end()
 std::vector<Shape*>::const_iterator SceneObject::end() const
 {
 	return this->shapes.end();
+}
+
+SceneObject SceneObject::clone()
+{
+	try
+	{
+		SceneObject* clone_scene_object = new SceneObject();
+		// Add all shape information to the cloned object.
+		for (Shape* shape : this->shapes) 
+		{
+			Shape* clone_shape = shape->clone();
+			clone_scene_object->add_shape(clone_shape);
+		}
+
+		// Copy the bump_map buffer instance over.
+		if (this->bump_map != nullptr)
+		{
+			ImageBuffer* clone_bump_map = new ImageBuffer(this->bump_map->clone());
+			clone_scene_object->load_bump_map(clone_bump_map);
+		}
+
+		// Copy the texture map buffer instance over.
+		if (this->texture_map != nullptr)
+		{
+			ImageBuffer* clone_texture_map = new ImageBuffer(this->texture_map->clone());
+			clone_scene_object->load_texture_map(clone_texture_map);
+		}
+	
+
+		// Add all material values to the cloned object.
+		for (map<string, string>::iterator iter = this->materials.begin(); iter != this->materials.end(); ++iter)
+		{
+			clone_scene_object->add_material(iter->first, iter->second);
+		}
+
+		return *clone_scene_object;
+	}
+	catch (exception& e)
+	{
+		throw SceneObjectException("Could not clone scene object.");
+	}
 }
 

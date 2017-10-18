@@ -36,6 +36,11 @@ class Camera
 		* Camera deconstructor.
 		*/
 		~Camera();
+
+		/**
+		* Clone camera instance;
+		*/
+		Camera clone();
 };
 
 #endif

@@ -27,3 +27,10 @@ Color LightSource::get_color()
 {
 	return this->color;
 }
+
+LightSource LightSource::clone()
+{
+	glm::vec3 clone_position = glm::vec3(this->position.x, this->position.y, this->position.z);
+	Color clone_color = Color(this->color.r, this->color.g, this->color.b);
+	return LightSource(clone_position, clone_color);
+}

@@ -80,5 +80,10 @@ class ImageBuffer
 		* Fetches size of buffer.
 		*/
 		virtual int get_size();
+
+		/**
+		* Clone instance of image buffer.
+		*/
+		virtual ImageBuffer clone();
 };
 #endif

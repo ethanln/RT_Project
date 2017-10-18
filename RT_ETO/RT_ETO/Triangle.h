@@ -37,6 +37,11 @@ class Triangle : public Shape
 		* Triangle deconstructor.
 		*/
 		~Triangle();
+
+		/**
+		* Clone triangle instance.
+		*/
+		virtual Shape* clone() throw(ShapeException);
 };
 
 #endif

@@ -4,6 +4,7 @@
 
 #include <glm/vec3.hpp>
 #include "Color.h"
+
 using namespace std;
 
 class LightSource {
@@ -45,6 +46,11 @@ class LightSource {
 		* Fetches light source color.
 		*/
 		virtual Color get_color();
+
+		/**
+		* Clone light source instance.
+		*/
+		virtual LightSource clone();
 };
 
 #endif

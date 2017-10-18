@@ -21,8 +21,6 @@ class Shape
 
 		SHAPE_TYPE shape_type;
 
-		map<string, string> materials;
-
 	public:
 
 		/**
@@ -36,14 +34,9 @@ class Shape
 		virtual ~Shape();
 
 		/**
-		* Add material to shape.
+		* Clone shape instance;
 		*/
-		virtual void add_material(string key, string value) throw(ShapeException);
-
-		/**
-		* Get material from shape.
-		*/
-		virtual string get_material(string key) throw(ShapeException);
+		virtual Shape* clone() throw(ShapeException) = 0;
 
 };
 #endif

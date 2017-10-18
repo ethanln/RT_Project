@@ -36,7 +36,7 @@ ImageBuffer::ImageBuffer(int _dim_x, int _dim_y, Color c)
 
 ImageBuffer::~ImageBuffer()
 {
-	
+
 }
 
 void ImageBuffer::update_pixel(Color color, int x, int y)
@@ -112,4 +112,18 @@ uint8_t* ImageBuffer::get_binary()
 int ImageBuffer::get_size()
 {
 	return this->dim_x * this->dim_y * 3;
+}
+
+ImageBuffer ImageBuffer::clone() 
+{
+	ImageBuffer clone_image_buffer(this->dim_x, this->dim_y);
+	for (unsigned int i = 0; i < this->dim_y; i++) 
+	{
+		for (unsigned int j = 0; j < this->dim_x; j++)
+		{
+			clone_image_buffer.update_pixel(*this->get_pixel(j, i), j, i);
+		}
+	}
+
+	return clone_image_buffer;
 }

@@ -25,7 +25,7 @@ class Scene {
 		/**
 		* Light source of scene.
 		*/
-		LightSource* light_source;
+		vector<LightSource*> light_sources;
 
 		/**
 		* Light source of scene.
@@ -42,7 +42,7 @@ class Scene {
 		/**
 		* Contructor.
 		*/
-		Scene(LightSource* _light_source, CameraView* _camera);
+		Scene(CameraView* _camera_view);
 
 		/**
 		* Decontructor.
@@ -58,6 +58,26 @@ class Scene {
 		* Fetches a scene object from the scene.
 		*/
 		virtual SceneObject* get_scene_object(string name) throw(SceneException);
+
+		/**
+		* Adds a light source to the scene.
+		*/
+		virtual void add_light_source(LightSource* _light_source) throw(SceneException);
+
+		/**
+		* Fetches a light source from the scene.
+		*/
+		virtual LightSource* get_light_source(int index) throw(SceneException);
+
+		/**
+		* Fetches the number of light sources in the scene.
+		*/
+		virtual int get_light_source_count();
+
+		/**
+		* Sets the camera view
+		*/
+		virtual void set_camera_view(CameraView* _camera_view);
 
 		/**
 		* Fetches camera instance.
