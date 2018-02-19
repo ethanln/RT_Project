@@ -110,5 +110,32 @@ bool ShapeTest::do_test()
 
 	this->ASSERT_FALSE("Test ray [0, 0, 1] intersection result for triangle starting from [1, -0.1, -1], should not intersect", result.does_intersect);
 
+	// Test Sphere intersection functionality.
+	Sphere interSphere = Sphere(1.0f, vec3(0.0f, 0.0f, 0.0f));
+	ray = Ray(vec3(0.5f, 0.5f, 1.0f), vec3(-0.5f, -0.5f, -1.0f));
+	result = interSphere.test_line_collision(ray);
+
+	this->ASSERT_TRUE("Test ray [0.5, 0.5, 1] intersection result for sphere starting from [-0.5, -0.5, -1.0], should intersect", result.does_intersect);
+
+	ray = Ray(vec3(1.0f, 1.0f, 1.0f), vec3(0.0f, 0.0f, 0.0f));
+	result = interSphere.test_line_collision(ray);
+
+	this->ASSERT_TRUE("Test ray [1.0, 1.0, 1.0] intersection result for sphere starting from [0.0, 0.0, 0.0], should intersect", result.does_intersect);
+
+	ray = Ray(vec3(0.0f, 0.0f, 1.0f), vec3(0.99f, 0.0f, -1.0f));
+	result = interSphere.test_line_collision(ray);
+
+	this->ASSERT_TRUE("Test ray [0.0, 0.0, 1.0] intersection result for sphere starting from [0.99, 0.0, -1.0], should intersect", result.does_intersect);
+
+	ray = Ray(vec3(0.0f, 0.0f, 1.0f), vec3(1.0f, 0.0f, -1.0f));
+	result = interSphere.test_line_collision(ray);
+
+	this->ASSERT_FALSE("Test ray [0.0, 0.0, 1.0] intersection result for sphere starting from [1.0, 0.0, -1.0], should not intersect", result.does_intersect);
+
+	ray = Ray(vec3(-1.0f, 0.0f, 0.0f), vec3(1.0f, 0.0f, -1.0f));
+	result = interSphere.test_line_collision(ray);
+
+	this->ASSERT_FALSE("Test ray [-1.0, 0.0, 0.0] intersection result for sphere starting from [1.0, 0.0, -1.0], should not intersect", result.does_intersect);
+
 	return is_pass;
 }

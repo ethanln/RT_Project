@@ -46,13 +46,6 @@ class Sphere : public Shape
 		* Clone sphere instance.
 		*/
 		virtual Shape* clone() throw(ShapeException);
-
-	private:
-
-		/**
-		* Checks to see if a ray intersects the sphere.
-		*/
-		bool does_intersect_sphere(vec3 direction, vec3 origin);
 };
 
 #endif
