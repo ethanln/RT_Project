@@ -1,21 +1,20 @@
 #pragma once
 
-#ifndef VEC3_TEST_H
-#define VEC3_TEST_H
+#ifndef VEC3_UTIL_TEST
+#define VEC3_UTIL_TEST
 
 #include "Test.h"
 #include "Vec3Util.h"
-#include <glm/vec3.hpp>
 
 using namespace std;
 using namespace Vec3Util;
 
-class Vec3Test : public Test
+class Vec3UtilTest : public Test 
 {
 	public:
-		Vec3Test();
+		Vec3UtilTest();
 
-		~Vec3Test();
+		~Vec3UtilTest();
 
 		virtual void print_header();
 

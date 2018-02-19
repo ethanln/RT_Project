@@ -11,10 +11,10 @@
 #include "CameraViewTest.h"
 #include "RayUtilTest.h"
 #include "MathUtilTest.h"
-#include "ShapeUtilTest.h"
 #include "ShapeTest.h"
 #include "FileSystemTest.h"
 #include "SceneObjectTest.h"
+#include "Vec3UtilTest.h"
 
 using namespace std;
 

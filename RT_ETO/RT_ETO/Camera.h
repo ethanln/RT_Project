@@ -6,6 +6,7 @@
 #include <glm/vec3.hpp>
 
 using namespace std;
+using namespace glm;
 
 class Camera
 {
@@ -13,19 +14,19 @@ class Camera
 		/**
 		* Camera position.
 		*/
-		glm::vec3 position;
+		vec3 position;
 
 		/**
 		* Camera orienation.
 		*/
-		glm::vec3 orientation;
+		vec3 orientation;
 
 	public:
 
 		/**
 		* Camera constructor.
 		*/
-		Camera(glm::vec3 _position, glm::vec3 _orientation);
+		Camera(vec3 _position, vec3 _orientation);
 
 		/**
 		* Camera constructor.

@@ -49,10 +49,6 @@ Test* TestFactory::_make_test(string key)
 	{
 		return new MathUtilTest();
 	}
-	else if (key == "ShapeUtilTest")
-	{
-		return new ShapeUtilTest();
-	}
 	else if (key == "ShapeTest")
 	{
 		return new ShapeTest();
@@ -64,6 +60,10 @@ Test* TestFactory::_make_test(string key)
 	else if (key == "SceneObjectTest")
 	{
 		return new SceneObjectTest();
+	}
+	else if (key == "Vec3UtilTest")
+	{
+		return new Vec3UtilTest();
 	}
 	return nullptr;
 }

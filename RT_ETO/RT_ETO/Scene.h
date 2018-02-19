@@ -13,6 +13,7 @@
 #include "SceneException.h"
 
 using namespace std;
+using namespace glm;
 
 class Scene {
 

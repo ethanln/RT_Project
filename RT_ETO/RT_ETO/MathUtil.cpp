@@ -2,8 +2,7 @@
 #include "MathUtil.h"
 
 using namespace std;
-
-float const MathUtil::PI = 3.14159265;
+using namespace MathUtil;
 
 float MathUtil::TO_RADIANS(float degree)
 {

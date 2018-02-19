@@ -42,14 +42,14 @@ IntersectionResult SceneFacade::test_for_intersection(Ray ray)
 				{
 					// If shape is a sphere, test for its intersection.
 					Sphere* sphere = static_cast<Sphere*>(shape);
-					temp_result = &ShapeUtil::TEST_SPHERE_INTERSECTION(ray, *sphere);
+					temp_result = &sphere->test_line_collision(ray); 
 					break;
 				}
 				case Shape::SHAPE_TYPE::TRIANGLE:
 				{
 					// If shape is a sphere, test for its intersection.
 					Triangle* triangle = static_cast<Triangle*>(shape);
-					temp_result = &ShapeUtil::TEST_TRIANGLE_INTERSECTION(ray, *triangle);
+					temp_result = &triangle->test_line_collision(ray);
 					break;
 				}
 				default:
@@ -78,8 +78,8 @@ IntersectionResult* SceneFacade::get_closest_intersection(Ray ray, IntersectionR
 	}
 
 	// Calculate the distances between the 
-	float dist1 = Vec3Util::MAG(ray.initial_position - inter1->intersection);
-	float dist2 = Vec3Util::MAG(ray.initial_position - inter2->intersection);
+	float dist1 = MAGNITUDE(ray.initial_position - inter1->intersection);
+	float dist2 = MAGNITUDE(ray.initial_position - inter2->intersection);
 
 	// Compare magnitudes
 	return dist1 <= dist2 ? inter1 : inter2;

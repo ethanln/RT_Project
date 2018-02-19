@@ -3,14 +3,14 @@
 
 bool RayUtil::IS_SEED_GENERATED = false;
 
-glm::vec3 RayUtil::CAST_RAY(glm::vec3 p1, glm::vec3 p2, bool is_normalized)
+vec3 RayUtil::CAST_RAY(vec3 p1, vec3 p2, bool is_normalized)
 {
 	// Calculate ray, and normalize it if flagged to do so.
-	glm::vec3 ray = is_normalized ? Vec3Util::NORMALIZE(p2 - p1) : p2 - p1;
+	vec3 ray = is_normalized ? NORMALIZE(p2 - p1) : p2 - p1;
 	return ray;
 }
 
-glm::vec3 RayUtil::CAST_RAY_JITTER(glm::vec3 p1, glm::vec3 p2, float radius_x, float radius_y, bool is_normalized)
+vec3 RayUtil::CAST_RAY_JITTER(vec3 p1, vec3 p2, float radius_x, float radius_y, bool is_normalized)
 {
 	RayUtil::INITIALIZE_RANDOM_SEED();
 
@@ -24,29 +24,29 @@ glm::vec3 RayUtil::CAST_RAY_JITTER(glm::vec3 p1, glm::vec3 p2, float radius_x, f
 	float LO_Y = p2.y - radius_y;
 	float variation_Y = LO_Y + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (HI_Y - LO_Y)));
 
-	glm::vec3 variation_coor = glm::vec3(variation_X, variation_Y, p2.z);
+	vec3 variation_coor = vec3(variation_X, variation_Y, p2.z);
 
 	// Calculate ray, and normalize it if flagged to do so.
-	glm::vec3 ray = is_normalized ? Vec3Util::NORMALIZE(variation_coor - p1) : variation_coor - p1;
+	vec3 ray = is_normalized ? NORMALIZE(variation_coor - p1) : variation_coor - p1;
 	return ray;
 }
 
-glm::vec3 RayUtil::CAST_RAY_REFLECTION()
+vec3 RayUtil::CAST_RAY_REFLECTION()
 {
 	// IMPLEMENT, will do this after testing JITTERING
-	return glm::vec3(0.0f, 0.0f, 0.0f);
+	return vec3(0.0f, 0.0f, 0.0f);
 }
 
-glm::vec3 RayUtil::CAST_RAY_REFLECTION_GLOSS()
+vec3 RayUtil::CAST_RAY_REFLECTION_GLOSS()
 {
 	// IMPLEMENT, will do this after testing JITTERING
-	return glm::vec3(0.0f, 0.0f, 0.0f);
+	return vec3(0.0f, 0.0f, 0.0f);
 }
 
-glm::vec3 RayUtil::CAST_RAY_REFRACTION()
+vec3 RayUtil::CAST_RAY_REFRACTION()
 {
 	// IMPLEMENT, will do this after testing JITTERING
-	return glm::vec3(0.0f, 0.0f, 0.0f);
+	return vec3(0.0f, 0.0f, 0.0f);
 }
 
 void RayUtil::INITIALIZE_RANDOM_SEED()

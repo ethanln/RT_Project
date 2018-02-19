@@ -6,25 +6,29 @@
 #include <math.h>
 
 using namespace std;
+using namespace glm;
 
-class Vec3Util
+namespace Vec3Util
 {
-	public:
+	/**
+	* Global normalize function.
+	*/
+	vec3 NORMALIZE(vec3 v);
 
-		/**
-		* Global normalize function.
-		*/
-		static glm::vec3 NORMALIZE(glm::vec3 v);
+	/**
+	* Global dot product function.
+	*/
+	float DOT(vec3 v1, vec3 v2);
 
-		/**
-		* Global dot product function.
-		*/
-		static float DOT(glm::vec3 v1, glm::vec3 v2);
+	/**
+	* Global magnitude function.
+	*/
+	float MAGNITUDE(vec3 v);
 
-		/**
-		* Global magnitude function.
-		*/
-		static float MAG(glm::vec3 v);
+	/**
+	* Global cross product function.
+	*/ 
+	vec3 CROSS_PRODUCT(vec3 v1, vec3 v2, bool is_normalized);
 };
 
 #endif

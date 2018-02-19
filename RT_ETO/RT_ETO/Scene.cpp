@@ -3,7 +3,7 @@
 
 Scene::Scene() 
 {
-	this->camera_view = new CameraView(new Camera(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f)), glm::vec3(0.0f, 0.0f, 3.0f), glm::vec3(0.0f, 0.0f, 0.0f), 500, 500, 22.5);
+	this->camera_view = new CameraView(new Camera(vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 0.0f, 0.0f)), vec3(0.0f, 0.0f, 3.0f), vec3(0.0f, 0.0f, 0.0f), 500, 500, 22.5);
 }
 
 Scene::Scene(CameraView* _camera)

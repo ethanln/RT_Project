@@ -6,6 +6,7 @@
 #include "Color.h"
 
 using namespace std;
+using namespace glm;
 
 class LightSource {
 
@@ -13,7 +14,7 @@ class LightSource {
 		/**
 		* Position of light source.
 		*/
-		glm::vec3 position;
+		vec3 position;
 
 		/**
 		* Color of light source.
@@ -25,12 +26,12 @@ class LightSource {
 		/**
 		* Contructor.
 		*/
-		LightSource(glm::vec3 _position);
+		LightSource(vec3 _position);
 
 		/**
 		* Contructor.
 		*/
-		LightSource(glm::vec3 _position, Color _color);
+		LightSource(vec3 _position, Color _color);
 
 		/**
 		* Decontructor.
@@ -40,7 +41,7 @@ class LightSource {
 		/**
 		* Fetches light source position.
 		*/
-		virtual glm::vec3 get_position();
+		virtual vec3 get_position();
 
 		/**
 		* Fetches light source color.

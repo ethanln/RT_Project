@@ -26,7 +26,7 @@ bool RayUtilTest::do_test()
 	{
 		stringstream ss;
 		ss << i;
-		glm::vec3 v1 = RayUtil::CAST_RAY_JITTER(glm::vec3(0.0f, 0.0f, 10.0f), glm::vec3(0.0f, 0.0f, 0.0f), radius, radius, false);
+		vec3 v1 = RayUtil::CAST_RAY_JITTER(vec3(0.0f, 0.0f, 10.0f), vec3(0.0f, 0.0f, 0.0f), radius, radius, false);
 
 		stringstream sx;
 		sx << fixed << setprecision(4) << v1.x << " > " << -radius;
@@ -52,7 +52,7 @@ bool RayUtilTest::do_test()
 	{
 		stringstream ss;
 		ss << i;
-		glm::vec3 v2 = RayUtil::CAST_RAY_JITTER(glm::vec3(0.0f, 0.0f, 10.0f), glm::vec3(-10.8239f, 10.8239f, 0.0f), radius, radius, false);
+		vec3 v2 = RayUtil::CAST_RAY_JITTER(vec3(0.0f, 0.0f, 10.0f), vec3(-10.8239f, 10.8239f, 0.0f), radius, radius, false);
 
 		stringstream sx;
 		sx << fixed << setprecision(4) << v2.x << " > " << -10.8239f - radius;

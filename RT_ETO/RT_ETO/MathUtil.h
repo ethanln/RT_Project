@@ -14,26 +14,22 @@
 
 using namespace std;
 
-class MathUtil
+namespace MathUtil
 {
-	public:
+	/**
+	* PI value.
+	*/
+	const float PI = 3.14159265;
 
-		/**
-		* PI value.
-		*/
-		static const float PI;
+	/**
+	* Global to radians.
+	*/
+	float TO_RADIANS(float degree);
 
-	public:
-
-		/**
-		* Global to radians.
-		*/
-		static float TO_RADIANS(float degree);
-
-		/**
-		* Global to degrees.
-		*/
-		static float TO_DEGREES(float radians);
+	/**
+	* Global to degrees.
+	*/
+	float TO_DEGREES(float radians);
 
 };
 #endif

@@ -17,27 +17,27 @@ class RayUtil
 		/**
 		* Global get vector ray.
 		*/
-		static glm::vec3 CAST_RAY(glm::vec3 p1, glm::vec3 p2, bool is_normalized);
+		static vec3 CAST_RAY(vec3 p1, vec3 p2, bool is_normalized);
 
 		/**
 		* Global get vector ray with jittering.
 		*/
-		static glm::vec3 CAST_RAY_JITTER(glm::vec3 p1, glm::vec3 p2, float radius_x, float radius_y, bool is_normalized);
+		static vec3 CAST_RAY_JITTER(vec3 p1, vec3 p2, float radius_x, float radius_y, bool is_normalized);
 
 		/**
 		* Global get vector reflection ray.
 		*/
-		static glm::vec3 CAST_RAY_REFLECTION();
+		static vec3 CAST_RAY_REFLECTION();
 
 		/**
 		* Global get vector reflection ray with gloss.
 		*/
-		static glm::vec3 CAST_RAY_REFLECTION_GLOSS();
+		static vec3 CAST_RAY_REFLECTION_GLOSS();
 
 		/**
 		* Global get vector refraction ray.
 		*/
-		static glm::vec3 CAST_RAY_REFRACTION();
+		static vec3 CAST_RAY_REFRACTION();
 
 		/**
 		* Set random seed generator.

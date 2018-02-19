@@ -6,16 +6,18 @@
 #include "Test.h"
 #include "MathUtil.h"
 
+using namespace MathUtil;
+
 class MathUtilTest : public Test
 {
-public:
-	MathUtilTest();
+	public:
+		MathUtilTest();
 
-	~MathUtilTest();
+		~MathUtilTest();
 
-	virtual void print_header();
+		virtual void print_header();
 
-	virtual bool do_test();
+		virtual bool do_test();
 };
 
 #endif

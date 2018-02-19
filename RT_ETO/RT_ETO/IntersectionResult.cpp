@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "IntersectionResult.h"
 
-IntersectionResult::IntersectionResult(Shape* _shape, glm::vec3 _intersection, bool _does_intersect)
+IntersectionResult::IntersectionResult(Shape* _shape, vec3 _intersection, bool _does_intersect)
 {
 	this->shape = _shape;
 	this->intersection = _intersection;
@@ -10,5 +10,9 @@ IntersectionResult::IntersectionResult(Shape* _shape, glm::vec3 _intersection, b
 
 IntersectionResult::~IntersectionResult()
 {
-	delete this->shape;
+	if (this->shape != nullptr)
+	{
+		delete shape;
+		this->shape = nullptr;
+	}
 }

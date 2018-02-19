@@ -85,7 +85,7 @@ bool SceneObjectTest::do_test()
 
 
 	ASSERT_EQUALS("Test initial list size of geometry shapes.", 0, obj.get_shapes().size());
-	obj.add_shape(new Sphere(2.0f, glm::vec3(0.0f, 1.0f, 2.0f)));
+	obj.add_shape(new Sphere(2.0f, vec3(0.0f, 1.0f, 2.0f)));
 	for (auto s : obj)
 	{
 		Sphere* sphere = static_cast<Sphere*>(s);

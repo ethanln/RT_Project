@@ -19,11 +19,11 @@ void Vec3Test::print_header()
 bool Vec3Test::do_test()
 {
 	bool is_pass = true;
-	glm::vec3 v1(1.0f, 1.0f, 1.0f);
-	glm::vec3 v2(4.0f, 4.0f, 4.0f);
+	vec3 v1(1.0f, 1.0f, 1.0f);
+	vec3 v2(4.0f, 4.0f, 4.0f);
 
 	// TEST VEC3 ADD
-	glm::vec3 v3 = v1 + v2;
+	vec3 v3 = v1 + v2;
 
 
 	this->ASSERT_EQUALS("Vec3 basic add arithmetic test ved.x", v3.x, 5.0f);
@@ -55,11 +55,11 @@ bool Vec3Test::do_test()
 	this->ASSERT_EQUALS("Vec3 basic divide arithmetic test vec.z", v3.z, 4.0f);
 	
 	// TEST VEC3 DOT
-	float dot_product = Vec3Util::DOT(v3, v3);
+	float dot_product = DOT(v3, v3);
 	this->ASSERT_EQUALS("Vec3 dot product", dot_product, 48.0f);
 
 	// TEST VEC3 NORMALIZE
-	v3 = Vec3Util::NORMALIZE(v3);
+	v3 = NORMALIZE(v3);
 
 	this->ASSERT_EQUALS("Vec3 basic divide arithmetic test ved.x", v3.x, 0.577350259f);
 	this->ASSERT_EQUALS("Vec3 basic divide arithmetic test ved.y", v3.y, 0.577350259f);

@@ -18,6 +18,8 @@
 #include "CameraViewException.h"
 
 using namespace std;
+using namespace glm;
+using namespace MathUtil;
 
 class CameraView
 {
@@ -30,17 +32,17 @@ class CameraView
 		/**
 		* Camera view plane.
 		*/
-		vector<vector<glm::vec3>> view_plane;
+		vector<vector<vec3>> view_plane;
 
 		/**
 		* Look from.
 		*/
-		glm::vec3 look_from;
+		vec3 look_from;
 
 		/**
 		* Look at.
 		*/
-		glm::vec3 look_at;
+		vec3 look_at;
 
 		/**
 		* Dimension X
@@ -72,7 +74,7 @@ class CameraView
 		/**
 		* CameraView constructor.
 		*/
-		CameraView(Camera* _camera, glm::vec3 _look_from, glm::vec3 _look_at, int _dim_x, int _dim_y, float _fov);
+		CameraView(Camera* _camera, vec3 _look_from, vec3 _look_at, int _dim_x, int _dim_y, float _fov);
 
 		/**
 		* CameraView deconstructor.
@@ -87,32 +89,32 @@ class CameraView
 		/**
 		* Set cam position.
 		*/
-		virtual void set_cam_pos(glm::vec3 _new_pos);
+		virtual void set_cam_pos(vec3 _new_pos);
 
 		/**
 		* Set cam orientation.
 		*/
-		virtual void set_cam_orientation(glm::vec3 _new_orientation);
+		virtual void set_cam_orientation(vec3 _new_orientation);
 
 		/**
 		* Get camera postion.
 		*/
-		virtual glm::vec3 get_cam_pos();
+		virtual vec3 get_cam_pos();
 
 		/**
 		* Get camera orientation.
 		*/
-		virtual glm::vec3 get_cam_orientation();
+		virtual vec3 get_cam_orientation();
 
 		/**
 		* Get frustrum look from.
 		*/
-		virtual glm::vec3 get_look_from();
+		virtual vec3 get_look_from();
 
 		/**
 		* Get frustrum look at.
 		*/
-		virtual glm::vec3 get_look_at();
+		virtual vec3 get_look_at();
 		
 		/**
 		* Get dimension x.
@@ -132,7 +134,7 @@ class CameraView
 		/**
 		* Get coordinate at pixel location (x,y).
 		*/
-		virtual glm::vec3 get_pixel_coor(int _x, int _y);
+		virtual vec3 get_pixel_coor(int _x, int _y);
 
 		/**
 		* Clone camera view instance.

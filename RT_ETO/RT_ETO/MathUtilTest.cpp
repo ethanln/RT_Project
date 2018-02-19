@@ -24,14 +24,14 @@ bool MathUtilTest::do_test()
 	float d2 = 180.0f;
 	float d3 = 30.0f;
 
-	this->ASSERT_EQUALS("Test from degrees to radians 1", MathUtil::TO_RADIANS(d1), 0.872664630f);
-	this->ASSERT_EQUALS("Test from degrees to radians 2", MathUtil::TO_RADIANS(d2), MathUtil::PI);
-	this->ASSERT_EQUALS("Test from degrees to radians 3", MathUtil::TO_RADIANS(d3), MathUtil::PI / 6.0f);
+	this->ASSERT_EQUALS("Test from degrees to radians 1", TO_RADIANS(d1), 0.872664630f);
+	this->ASSERT_EQUALS("Test from degrees to radians 2", TO_RADIANS(d2), PI);
+	this->ASSERT_EQUALS("Test from degrees to radians 3", TO_RADIANS(d3), PI / 6.0f);
 
-	float r1 = 2.0f * MathUtil::PI;
-	float r2 = MathUtil::PI / 3.0f;
+	float r1 = 2.0f * PI;
+	float r2 = PI / 3.0f;
 
-	this->ASSERT_EQUALS("Test from radians to degrees 1", MathUtil::TO_DEGREES(r1), 360.0f);
-	this->ASSERT_EQUALS("Test from radians to degrees 2", MathUtil::TO_DEGREES(r2), 60.0f);
+	this->ASSERT_EQUALS("Test from radians to degrees 1", TO_DEGREES(r1), 360.0f);
+	this->ASSERT_EQUALS("Test from radians to degrees 2", TO_DEGREES(r2), 60.0f);
 	return is_pass;
 }

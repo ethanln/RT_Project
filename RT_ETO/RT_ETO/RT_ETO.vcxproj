@@ -88,7 +88,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\Ethan\Desktop\development\RayTracer\libs\glm;C:\Users\Ethan\Desktop\development\RayTracer\libs\cpp-colors;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Ethan\Desktop\BACK_UP\development\RayTracer\libs\glm;C:\Users\Ethan\Desktop\BACK_UP\development\RayTracer\libs\cpp-colors;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -104,7 +104,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\Ethan\Desktop\development\RayTracer\libs\glm;C:\Users\Ethan\Desktop\development\RayTracer\libs\cpp-colors;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Ethan\Desktop\BACK_UP\development\RayTracer\libs\glm;C:\Users\Ethan\Desktop\BACK_UP\development\RayTracer\libs\cpp-colors;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -185,8 +185,6 @@
     <ClInclude Include="Shape.h" />
     <ClInclude Include="ShapeException.h" />
     <ClInclude Include="ShapeTest.h" />
-    <ClInclude Include="ShapeUtil.h" />
-    <ClInclude Include="ShapeUtilTest.h" />
     <ClInclude Include="Sphere.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -196,6 +194,7 @@
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vec3Test.h" />
     <ClInclude Include="Vec3Util.h" />
+    <ClInclude Include="Vec3UtilTest.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
@@ -229,8 +228,6 @@
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="ShapeException.cpp" />
     <ClCompile Include="ShapeTest.cpp" />
-    <ClCompile Include="ShapeUtil.cpp" />
-    <ClCompile Include="ShapeUtilTest.cpp" />
     <ClCompile Include="Sphere.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -244,6 +241,7 @@
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Vec3Test.cpp" />
     <ClCompile Include="Vec3Util.cpp" />
+    <ClCompile Include="Vec3UtilTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="RT_ETO.rc" />

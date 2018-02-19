@@ -6,16 +6,17 @@
 #include <glm/vec3.hpp>
 
 using namespace std;
+using namespace glm;
 
 class Ray
 {
 	public:
-		glm::vec3 direction;
+		vec3 direction;
 
-		glm::vec3 initial_position;
+		vec3 initial_position;
 
 	public:
-		Ray(glm::vec3 _direction, glm::vec3 _initial_position);
+		Ray(vec3 _direction, vec3 _initial_position);
 
 		~Ray();
 };

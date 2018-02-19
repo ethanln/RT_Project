@@ -1,4 +1,7 @@
 #pragma once
+
+
+
 #ifndef INTERSECTION_RESULT_H
 #define INTERSECTION_RESULT_H
 
@@ -6,7 +9,9 @@
 #include "glm/vec3.hpp"
 
 using namespace std;
+using namespace glm;
 
+class Shape;
 class IntersectionResult 
 {
 	public:
@@ -18,7 +23,7 @@ class IntersectionResult
 		/*
 		* The intersection coordinate.
 		*/
-		glm::vec3 intersection;
+		vec3 intersection;
 
 		/*
 		* Intersection marker.
@@ -28,7 +33,7 @@ class IntersectionResult
 		/*
 		* Constructor.
 		*/
-		IntersectionResult(Shape* _shape, glm::vec3 _intersection, bool _does_intersect);
+		IntersectionResult(Shape* _shape, vec3 _intersection, bool _does_intersect);
 
 		/*
 		* Deconstructor.
