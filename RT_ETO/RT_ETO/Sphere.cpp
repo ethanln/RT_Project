@@ -78,3 +78,11 @@ Shape* Sphere::clone()
 		throw new ShapeException("Could not clone sphere object.");
 	}
 }
+
+string Sphere::hash()
+{
+	ostringstream ss;
+	ss << this->seed << this->center.x << this->center.y << this->center.z << this->radius;
+	// We should make sure that the id's are 256 bit.
+	return ss.str();
+}

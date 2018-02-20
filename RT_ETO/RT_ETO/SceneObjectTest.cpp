@@ -86,7 +86,7 @@ bool SceneObjectTest::do_test()
 
 	ASSERT_EQUALS("Test initial list size of geometry shapes.", 0, obj.get_shapes().size());
 	obj.add_shape(new Sphere(2.0f, vec3(0.0f, 1.0f, 2.0f)));
-	for (auto s : obj)
+	for (auto s : obj.get_shapes())
 	{
 		Sphere* sphere = static_cast<Sphere*>(s);
 		ASSERT_EQUALS("Test iteration process of object with Sphere params radius", 2.0f, sphere->radius);
@@ -102,7 +102,7 @@ bool SceneObjectTest::do_test()
 	this->ASSERT_FALSE("Test object to see if it does not contain the new clone material.", obj.has_material("stuff_1"));
 	this->ASSERT_TRUE("Test clone object to see if it does contain the new clone material.", clone_obj.has_material("stuff_1"));
 
-	for (auto s : clone_obj)
+	for (auto s : clone_obj.get_shapes())
 	{
 		Sphere* sphere = static_cast<Sphere*>(s);
 		ASSERT_EQUALS("Test iteration process of clone object with Sphere params radius", 2.0f, sphere->radius);

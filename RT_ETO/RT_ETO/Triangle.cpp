@@ -80,6 +80,16 @@ Shape* Triangle::clone()
 	}
 }
 
+
+string Triangle::hash()
+{
+	ostringstream ss;
+	ss << this->seed << this->p1.x << this->p1.y << this->p1.z << this->p2.x << this->p2.y << this->p2.z << this->p3.x << this->p3.y << this->p3.z;
+	// We should make sure that the id's are 256 bit.
+	return ss.str();
+}
+
+
 bool Triangle::does_intersect_triangle(vec3 direction, vec3 origin, vec3 intersection)
 {
 	vec3 intersectTemp = vec3(intersection.x, intersection.y, intersection.z);

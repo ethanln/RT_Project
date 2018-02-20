@@ -46,6 +46,11 @@ class Sphere : public Shape
 		* Clone sphere instance.
 		*/
 		virtual Shape* clone() throw(ShapeException);
+
+		/**
+		* Generates hash value of object.
+		*/
+		virtual string hash();
 };
 
 #endif

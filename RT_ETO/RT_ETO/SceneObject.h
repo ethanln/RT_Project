@@ -16,7 +16,7 @@ class SceneObject {
 		/**
 		* Shape meshes of object.
 		*/
-		vector<Shape*> shapes;
+		map<string, Shape*> shapes;
 
 		/**
 		* Bump map buffer.
@@ -71,6 +71,11 @@ class SceneObject {
 		virtual vector<Shape*> get_shapes();
 
 		/**
+		* Returns a shape instance from the list of shapes.
+		*/
+		virtual Shape* get_shape(string id);
+
+		/**
 		* Adds shape data to the objects list structure.
 		*/
 		virtual void add_shape(Shape* shape);
@@ -89,26 +94,6 @@ class SceneObject {
 		* Check if material exists.
 		*/
 		virtual bool has_material(string key) throw(SceneObjectException);
-
-		/**
-		* Returns first iteration in memory of shape list.
-		*/
-		virtual std::vector<Shape*>::iterator begin();
-
-		/**
-		* Returns first iteration in memory of shape list as constant.
-		*/
-		virtual std::vector<Shape*>::const_iterator begin() const;
-
-		/**
-		* Returns last iteration in memory of shape list.
-		*/
-		virtual std::vector<Shape*>::iterator  end();
-
-		/**
-		* Returns last iteration in memory of shape list as const.
-		*/
-		virtual std::vector<Shape*>::const_iterator end() const;
 
 		/**
 		* Clone scene object instance.

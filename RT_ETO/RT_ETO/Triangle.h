@@ -51,6 +51,11 @@ class Triangle : public Shape
 		*/
 		virtual Shape* clone() throw(ShapeException);
 
+		/**
+		* Generates hash value of object.
+		*/
+		virtual string hash();
+
 	private:
 		
 		/**

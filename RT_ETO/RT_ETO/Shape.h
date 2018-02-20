@@ -10,6 +10,7 @@
 #include <exception>
 #include <string>
 #include <map>
+#include <sstream>
 #include "IntersectionResult.h"
 #include "Ray.h"
 #include "Vec3Util.h"
@@ -29,6 +30,8 @@ class Shape
 		};
 
 		SHAPE_TYPE shape_type;
+
+		int seed;
 
 	public:
 
@@ -56,6 +59,11 @@ class Shape
 		* Clone shape instance;
 		*/
 		virtual Shape* clone() throw(ShapeException) = 0;
+
+		/**
+		* Generates hash value of object.
+		*/
+		virtual string hash() = 0;
 
 };
 #endif

@@ -33,7 +33,7 @@ IntersectionResult SceneFacade::test_for_intersection(Ray ray)
 	for (SceneObject* scene_object : this->scene)
 	{
 		// Iterate through each shape of the scene object.
-		for (Shape* shape : *scene_object)
+		for (Shape* shape : scene_object->get_shapes())
 		{
 			IntersectionResult* temp_result = nullptr;
 			switch (shape->shape_type)

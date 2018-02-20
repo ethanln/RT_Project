@@ -22,11 +22,12 @@ SceneObject::~SceneObject()
 	}
 	
 	// Delete all shape pointers.
-	for (unsigned int i = 0; i < this->shapes.size(); i++)
+	for (map<string, Shape*>::iterator iter = this->shapes.begin(); iter != this->shapes.end(); ++iter)
 	{
-		Shape* color = this->shapes.at(i);
-		delete color;
+		Shape* shape = iter->second;
+		delete shape;
 	}
+
 	shapes.clear();
 }
 
@@ -50,18 +51,18 @@ Color SceneObject::get_bump_map_pixel(int x, int y)
 		throw SceneObjectException(ss.str());
 	}
 
-	try
-	{
-		Color* c = this->bump_map->get_pixel(x, y);
-		return *c;
-	}
-	catch (ImageBufferException& e)
-	{
-		// Throw Scene Object Exception if indices are out of range.
-		stringstream ss;
-		ss << "Pixel index (" << x << ", " << y << ") out of range for bump map.";
-		throw SceneObjectException(ss.str());
-	}
+try
+{
+	Color* c = this->bump_map->get_pixel(x, y);
+	return *c;
+}
+catch (ImageBufferException& e)
+{
+	// Throw Scene Object Exception if indices are out of range.
+	stringstream ss;
+	ss << "Pixel index (" << x << ", " << y << ") out of range for bump map.";
+	throw SceneObjectException(ss.str());
+}
 }
 
 Color SceneObject::get_texture_map_pixel(int x, int y)
@@ -90,12 +91,44 @@ Color SceneObject::get_texture_map_pixel(int x, int y)
 
 vector<Shape*> SceneObject::get_shapes()
 {
-	return this->shapes;
+	// get a list of shapes.
+	vector<Shape*> shapes_list;
+	for (map<string, Shape*>::iterator iter = this->shapes.begin(); iter != this->shapes.end(); ++iter)
+	{
+		Shape* shape = iter->second;
+		shapes_list.push_back(shape);
+	}
+
+	return shapes_list;
+}
+
+Shape* SceneObject::get_shape(string id)
+{
+	try 
+	{
+		if (this->shapes.count(id) > 0)
+		{
+			return this->shapes[id];
+		}
+		return nullptr;
+	}
+	catch(exception& e)
+	{
+		throw SceneObjectException("Could not fetch shape.");
+	}
 }
 
 void SceneObject::add_shape(Shape* shape)
 {
-	this->shapes.push_back(shape);
+	string id = shape->hash();
+	try
+	{
+		this->shapes.insert(std::pair<string, Shape*>(id, shape));
+	}
+	catch (exception& e)
+	{
+		throw SceneObjectException("Could not insert shape into object.");
+	}
 }
 
 void SceneObject::add_material(string key, string value)
@@ -114,11 +147,15 @@ string SceneObject::get_material(string key)
 {
 	try
 	{
-		return this->materials[key];
+		if (this->materials.count(key) > 0)
+		{
+			return this->materials[key];
+		}
+		return "";
 	}
 	catch (exception& e)
 	{
-		throw SceneObjectException("Could not fetch shape object.");
+		throw SceneObjectException("Could not fetch material.");
 	}
 }
 
@@ -127,35 +164,15 @@ bool SceneObject::has_material(string key)
 	return this->materials.count(key) > 0;
 }
 
-std::vector<Shape*>::iterator SceneObject::begin()
-{
-	return this->shapes.begin();
-}
-
-std::vector<Shape*>::const_iterator SceneObject::begin() const
-{
-	return this->shapes.begin();
-}
-
-std::vector<Shape*>::iterator SceneObject::end()
-{
-	return this->shapes.end();
-}
-
-std::vector<Shape*>::const_iterator SceneObject::end() const
-{
-	return this->shapes.end();
-}
-
 SceneObject SceneObject::clone()
 {
 	try
 	{
 		SceneObject* clone_scene_object = new SceneObject();
 		// Add all shape information to the cloned object.
-		for (Shape* shape : this->shapes) 
+		for (map<string, Shape*>::iterator iter = this->shapes.begin(); iter != this->shapes.end(); ++iter)
 		{
-			Shape* clone_shape = shape->clone();
+			Shape* clone_shape = iter->second->clone();
 			clone_scene_object->add_shape(clone_shape);
 		}
 
